@@ -5,12 +5,20 @@
     font-family:  'Inconsolata', monospace;
 }
 
-.title{
-    line-height: 2pt;
-}
+
 nav{
     display:flex;
     justify-content: flex-start;
     flex-wrap: wrap;
 
+}
+.title{
+    line-height: 2pt;
+}
+.refs{
+    display: flex;
+    flex-wrap: wrap;
+    span{
+        padding: 6px 0 3px 0;
+    }
 }
