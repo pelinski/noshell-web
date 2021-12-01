@@ -1,7 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
 * {
     background: black;
     color:rgb(74,246,38);
     font-family:  'Inconsolata', monospace;
 }
 
+.title{
+    line-height: 2pt;
+}
+nav{
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
