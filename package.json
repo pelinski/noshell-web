@@ -4,7 +4,7 @@
   "repository": "git@github.com:pelinski/noshell-web.git",
   "author": "Teresa Pelinski <teresapelinski@gmail.com>",
   "license": "MIT",
-  "homepage": "https://pelinski.github.io/noshell-web/",
+  "homepage": "https://noshell.herokuapp.com/",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.1",
     "parcel": "^2.0.1"
