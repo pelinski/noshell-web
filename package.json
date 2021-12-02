@@ -5,16 +5,20 @@
   "repository": "git@github.com:pelinski/noshell-web.git",
   "author": "Teresa Pelinski <teresapelinski@gmail.com>",
   "license": "MIT",
+  "homepage": ".",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.1",
     "parcel": "^2.0.1"
   },
+  
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html",
-    "start": "serve"
+    "start": "serve",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
