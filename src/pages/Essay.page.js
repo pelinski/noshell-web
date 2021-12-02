@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Sup, FootNote } from '../components/Sup'
+import { Sup, FootNote } from '../components/Sup.js'
 
 
 export const EssayPage = () => {

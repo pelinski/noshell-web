@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-ro
 import './App.scss';
 
 
-import { HomePage } from "./pages/Home.page";
-import { EssayPage } from "./pages/Essay.page";
-import { Nav } from "./components/Nav";
-import { Tldr } from "./pages/Tldr.page";
-import { VideoPage } from "./pages/Video.page";
-import { AboutMePage } from "./pages/AboutMe.page";
+import { HomePage } from "./pages/Home.page.js";
+import { EssayPage } from "./pages/Essay.page.js";
+import { Nav } from "./components/Nav.js";
+import { Tldr } from "./pages/Tldr.page.js";
+import { VideoPage } from "./pages/Video.page.js";
+import { AboutMePage } from "./pages/AboutMe.page.js";
 
 export const App = () =>
     <>
