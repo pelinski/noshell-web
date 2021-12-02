@@ -1,24 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap");
 * {
     background: black;
-    color:rgb(74,246,38);
-    font-family:  'Inconsolata', monospace;
+    color: rgb(74, 246, 38);
+    font-family: "Inconsolata", monospace;
 }
 
-
-nav{
-    display:flex;
+nav {
+    display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-
 }
-.title{
+.title {
     line-height: 2pt;
 }
-.refs, .footnotes{
+.refs,
+.footnotes {
     display: flex;
     flex-wrap: wrap;
-    span{
+    span {
         padding: 6px 0 3px 0;
     }
 }
