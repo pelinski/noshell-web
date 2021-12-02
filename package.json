@@ -1,11 +1,10 @@
 {
   "name": "noshell-web",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "git@github.com:pelinski/noshell-web.git",
   "author": "Teresa Pelinski <teresapelinski@gmail.com>",
   "license": "MIT",
-  "homepage": ".",
+  "homepage": "https://pelinski.github.io/noshell-web/",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.1",
     "parcel": "^2.0.1"
@@ -15,6 +14,7 @@
     "build": "parcel build index.html",
     "dev": "parcel index.html",
     "start": "serve",
+    "predeploy":"npm run build",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
