@@ -3,9 +3,12 @@
 // media
 $ipad: 812px;
 
+//colors
+$green: rgb(74, 246, 38);
+
 * {
     background: black;
-    color: rgb(74, 246, 38);
+    color: green;
     font-family: "Inconsolata", monospace;
 }
 
@@ -21,8 +24,24 @@ body {
         flex-wrap: wrap;
     }
     .title {
-        line-height: 2pt;
+        height: 100vh;
+        display: flex;
+        white-space: pre;
+        text-align: center;
+        max-width: 100%;
+        overflow: scroll;
+        background: transparent;
+        > div {
+            color: white;
+
+            align-self: center;
+            > span {
+                // letters
+                color: white;
+            }
+        }
     }
+
     .refs,
     .footnotes {
         display: flex;
