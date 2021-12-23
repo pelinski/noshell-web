@@ -2,10 +2,11 @@ import React from "react";
 import Typewriter from 'typewriter-effect';
 
 export const HomePage = () => (
-    <>  <div className='title'>
-        <h1>+++no shell</h1>
-        <h1>just a voice+++</h1>
-    </div>
+    <>
+        <div className='title'>
+            <h1>+++no shell</h1>
+            <h1>just a voice+++</h1>
+        </div>
 
         <Typewriter options={{
             strings: [`<>
@@ -13,7 +14,7 @@ export const HomePage = () => (
             autoStart: true,
             cursor: '',
             delay: 50,
-            deleteSpeed:0
+            deleteSpeed: 0
         }}
 
         />

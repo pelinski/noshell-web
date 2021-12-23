@@ -1,23 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap");
+
+// media
+$ipad: 812px;
+
 * {
     background: black;
     color: rgb(74, 246, 38);
     font-family: "Inconsolata", monospace;
 }
 
-nav {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-.title {
-    line-height: 2pt;
-}
-.refs,
-.footnotes {
-    display: flex;
-    flex-wrap: wrap;
-    span {
-        padding: 6px 0 3px 0;
+body {
+    .wrapper {
+        @media (min-width: $ipad) {
+            padding: 5vh 15vw;
+        }
+    }
+    nav {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .title {
+        line-height: 2pt;
+    }
+    .refs,
+    .footnotes {
+        display: flex;
+        flex-wrap: wrap;
+        span {
+            padding: 6px 0 3px 0;
+        }
     }
 }

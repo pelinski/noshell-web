@@ -13,15 +13,19 @@ import { AboutMePage } from "./pages/AboutMe.page";
 
 export const App = () =>
     <>
-        <Router>
-            <Routes>
-                <Route path="/" exact element={<HomePage />} />
-                <Route path="/read" exact element={<EssayPage />} />
-                <Route path="/tldr" exact element={<Tldr />} />
-                <Route path="/video" exact element={<VideoPage />} />
-                <Route path="/me" exact element={<AboutMePage />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-            <Nav />
-        </Router>
+        <div className='wrapper'>
+            <Router>
+                <Routes>
+
+                    <Route path="/" exact element={<HomePage />} />
+                    <Route path="/read" exact element={<EssayPage />} />
+                    <Route path="/tldr" exact element={<Tldr />} />
+                    <Route path="/video" exact element={<VideoPage />} />
+                    <Route path="/me" exact element={<AboutMePage />} />
+                    <Route path="*" element={<Navigate to="/" replace />} />
+                </Routes>
+                <Nav />
+            </Router>
+        </div>
+
     </>
