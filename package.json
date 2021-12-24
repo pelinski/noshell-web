@@ -9,15 +9,16 @@
     "@parcel/transformer-sass": "^2.0.1",
     "parcel": "^2.0.1"
   },
-  
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html",
     "start": "serve",
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "beautiful-react-hooks": "^1.0.2",
+    "cfonts": "^2.10.0",
     "gh-pages": "^3.2.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",

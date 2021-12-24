@@ -1,23 +1,96 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap");
-* {
-    background: black;
-    color: rgb(74, 246, 38);
-    font-family: "Inconsolata", monospace;
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;900&display=swap");
+// media
+$ipad: 812px;
+
+//colors
+$green: rgb(74, 246, 38);
+
+// animation
+$animation-time: 1s;
+@keyframes title {
+    0% {
+        line-height: 0.9pt;
+        padding: 30vw;
+        flex-wrap: wrap;
+    }
+    10% {
+        padding: 10vw;
+    }
+    80% {
+        line-height: 0.3pt;
+        padding: 10vw;
+    }
+    95% {
+        flex-direction: column-reverse;
+    }
+    100% {
+        line-height: 0.9pt;
+        padding: 14vw;
+    }
 }
 
-nav {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+* {
+    background: black;
+    color: green;
+    font-family: "Inconsolata", monospace;
+    font-weight: 300;
 }
-.title {
-    line-height: 2pt;
-}
-.refs,
-.footnotes {
-    display: flex;
-    flex-wrap: wrap;
-    span {
-        padding: 6px 0 3px 0;
+
+body {
+    .wrapper {
+        @media (min-width: $ipad) {
+            // padding: 5vh 15vw;
+        }
+    }
+    nav {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .title-box {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        font-weight: bold;
+        justify-content: center;
+
+        .title {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            animation: title $animation-time step-end normal;
+
+            // colours
+            > div {
+                // background
+                color: gray;
+                display: inline-block;
+                > span {
+                    // letters
+                    color: white;
+                }
+            }
+            // desktop
+            @media (min-width: $ipad) {
+                font-size: 0.9vw;
+            }
+            // mobile
+            @media (max-width: $ipad) {
+                font-weight: 900;
+                padding: 3vw;
+                font-size: 0.9vw;
+                height: auto;
+                width: 90vw;
+            }
+        }
+    }
+
+    .refs,
+    .footnotes {
+        display: flex;
+        flex-wrap: wrap;
+        span {
+            padding: 6px 0 3px 0;
+        }
     }
 }
