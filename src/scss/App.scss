@@ -10,9 +10,15 @@ $green: rgb(74, 246, 38);
 
 * {
     background: black;
-    color: green;
+    color: white;
     font-family: "Inconsolata", monospace;
     font-weight: 300;
+
+    // remove default button styling
+    button {
+        border: none;
+        background: none;
+    }
 
     // scrollbar
     overflow-x: hidden;

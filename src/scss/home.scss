@@ -1,5 +1,5 @@
 // animation
-$animation-time: 1s;
+$title-anim-time: 1s;
 @keyframes title {
     0% {
         line-height: 0.9pt;
@@ -21,19 +21,29 @@ $animation-time: 1s;
         padding: 14vw;
     }
 }
+@keyframes button {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
+// title
 .title-box {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     height: 100vh;
     font-weight: bold;
-    justify-content: center;
 
     .title {
         text-align: center;
+        margin: 20vh 0;
         display: flex;
         flex-direction: column;
-        animation: title $animation-time step-end normal;
+        animation: title $title-anim-time step-end 2 normal;
 
         > div {
             overflow-y: hidden;
@@ -58,4 +68,15 @@ $animation-time: 1s;
             width: 90vw;
         }
     }
+    a {
+        display: block;
+        text-align: center;
+        animation: button calc($title-anim-time + 0.3s) step-end normal;
+    }
+}
+
+//intro
+.intro {
+    display: inline-block;
+    height: 100vh;
 }
