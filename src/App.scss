@@ -1,21 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;900&display=swap");
 // media
 $ipad: 812px;
 
 //colors
 $green: rgb(74, 246, 38);
 
+// animation
+@keyframes title {
+    0% {
+        font-size: 0.9vw;
+        padding: 30vw;
+        flex-wrap: wrap;
+    }
+    10% {
+        padding: 10vw;
+    }
+    80% {
+        line-height: 0.3pt;
+        padding: 10vw;
+    }
+    95% {
+        flex-direction: column-reverse;
+    }
+    100% {
+        font-size: 0.9vw;
+        line-height: 0.9pt;
+        padding: 14vw;
+    }
+}
+
 * {
     background: black;
     color: green;
     font-family: "Inconsolata", monospace;
+    font-weight: 300;
 }
 
 body {
     .wrapper {
         @media (min-width: $ipad) {
-            padding: 5vh 15vw;
+            // padding: 5vh 15vw;
         }
     }
     nav {
@@ -23,21 +47,45 @@ body {
         justify-content: flex-start;
         flex-wrap: wrap;
     }
-    .title {
-        height: 100vh;
+    .title-box {
         display: flex;
-        white-space: pre;
-        text-align: center;
-        max-width: 100%;
-        overflow: scroll;
-        background: transparent;
-        > div {
-            color: white;
+        align-items: center;
+        height: 100vh;
+        font-weight: bold;
+        justify-content: center;
 
-            align-self: center;
-            > span {
-                // letters
+        .title {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+
+            // colours
+            > div {
+                // background
                 color: white;
+                display: inline-block;
+                > span {
+                    // letters
+                    color: white;
+                }
+            }
+
+            // desktop
+            @media (min-width: $ipad) {
+                font-size: 2em;
+            }
+            // mobile
+            @media (max-width: $ipad) {
+                font-weight: 900;
+                animation: title 1s step-end normal;
+                padding: 10vw;
+                font-size: 0.7vw;
+                height: auto;
+                width: 80vw;
+
+                span {
+                    animation: title 1s step-end normal;
+                }
             }
         }
     }
