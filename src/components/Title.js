@@ -101,11 +101,11 @@ export const ParsedTitle = ({ type }) => {
 }
 
 export const DesktopTitle = ({ type = "3d" }) =>
-    <marquee className="title-box">
+    <div className="title-box">
         <div className="title">
             <ParsedTitle type={type} />
         </div>
-    </marquee>
+    </div>
 
 export const MobileTitle = ({ type = "3d" }) =>
     <div className="title-box">

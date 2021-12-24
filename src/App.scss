@@ -6,9 +6,10 @@ $ipad: 812px;
 $green: rgb(74, 246, 38);
 
 // animation
+$animation-time: 1s;
 @keyframes title {
     0% {
-        font-size: 0.9vw;
+        line-height: 0.9pt;
         padding: 30vw;
         flex-wrap: wrap;
     }
@@ -23,7 +24,6 @@ $green: rgb(74, 246, 38);
         flex-direction: column-reverse;
     }
     100% {
-        font-size: 0.9vw;
         line-height: 0.9pt;
         padding: 14vw;
     }
@@ -58,34 +58,29 @@ body {
             text-align: center;
             display: flex;
             flex-direction: column;
+            animation: title $animation-time step-end normal;
 
             // colours
             > div {
                 // background
-                color: white;
+                color: gray;
                 display: inline-block;
                 > span {
                     // letters
                     color: white;
                 }
             }
-
             // desktop
             @media (min-width: $ipad) {
-                font-size: 2em;
+                font-size: 0.9vw;
             }
             // mobile
             @media (max-width: $ipad) {
                 font-weight: 900;
-                animation: title 1s step-end normal;
-                padding: 10vw;
-                font-size: 0.7vw;
+                padding: 3vw;
+                font-size: 0.9vw;
                 height: auto;
-                width: 80vw;
-
-                span {
-                    animation: title 1s step-end normal;
-                }
+                width: 90vw;
             }
         }
     }
