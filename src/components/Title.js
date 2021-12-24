@@ -100,16 +100,10 @@ export const ParsedTitle = ({ type }) => {
     }
 }
 
-export const DesktopTitle = ({ type = "3d" }) =>
+export const Title = ({ type = "3d" }) =>
     <div className="title-box">
         <div className="title">
             <ParsedTitle type={type} />
         </div>
     </div>
 
-export const MobileTitle = ({ type = "3d" }) =>
-    <div className="title-box">
-        <div className="title">
-            <ParsedTitle type={type} />
-        </div>
-    </div>
