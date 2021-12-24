@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import './App.scss';
+import './scss/App.scss';
 
 
 import { HomePage } from "./pages/Home.page";
@@ -15,7 +15,7 @@ import { WindowSizeContext, WindowSizeReporter } from "./api/Media";
 export const App = () => {
     [width, height] = WindowSizeReporter()
     return (
-        <div className='wrapper'>
+        <div id='wrapper'>
             <WindowSizeContext.Provider value={{ width, height }}>
                 <Router>
                     <Routes>

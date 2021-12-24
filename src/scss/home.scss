@@ -1,0 +1,61 @@
+// animation
+$animation-time: 1s;
+@keyframes title {
+    0% {
+        line-height: 0.9pt;
+        padding: 30vw;
+        flex-wrap: wrap;
+    }
+    10% {
+        padding: 10vw;
+    }
+    80% {
+        line-height: 0.3pt;
+        padding: 10vw;
+    }
+    95% {
+        flex-direction: column-reverse;
+    }
+    100% {
+        line-height: 0.9pt;
+        padding: 14vw;
+    }
+}
+
+.title-box {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    font-weight: bold;
+    justify-content: center;
+
+    .title {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        animation: title $animation-time step-end normal;
+
+        > div {
+            overflow-y: hidden;
+            // background
+            color: gray;
+            display: inline-block;
+            > span {
+                // letters
+                color: white;
+            }
+        }
+        // desktop
+        @media (min-width: $ipad) {
+            font-size: 0.9vw;
+        }
+        // mobile
+        @media (max-width: $ipad) {
+            font-weight: 900;
+            padding: 3vw;
+            font-size: 0.9vw;
+            height: auto;
+            width: 90vw;
+        }
+    }
+}
