@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import './scss/App.scss';
 
@@ -9,14 +9,15 @@ import { Nav } from "./components/Nav";
 import { Tldr } from "./pages/Tldr.page";
 import { VideoPage } from "./pages/Video.page";
 import { AboutMePage } from "./pages/AboutMe.page";
-import { WindowSizeContext, WindowSizeReporter } from "./api/Media";
+import { WindowContext, WindowSizeReporter, WindowScrollReporter, isDesktopView, getScrollY } from "./api/api.window";
 
 
 export const App = () => {
     [width, height] = WindowSizeReporter()
+    [scrollY] = WindowScrollReporter()
     return (
         <div id='wrapper'>
-            <WindowSizeContext.Provider value={{ width, height }}>
+            <WindowContext.Provider value={{ width, height, scrollY }}>
                 <Router>
                     <Routes>
                         <Route path="/" exact element={<HomePage />} />
@@ -28,7 +29,7 @@ export const App = () => {
                     </Routes>
                     <Nav />
                 </Router>
-            </WindowSizeContext.Provider>
+            </WindowContext.Provider>
         </div>
     )
 }

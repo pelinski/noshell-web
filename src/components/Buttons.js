@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import { isDesktopView } from "../api/Media";
+import { isDesktopView } from "../api/api.window";
 
 export const ScrollDownButton = ({ scrollTo }) =>
     <Link to={scrollTo} smooth={true} offset={isDesktopView() ? -50 : 0} duration={500} className="button">
