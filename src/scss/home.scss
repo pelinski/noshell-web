@@ -3,22 +3,19 @@ $title-anim-time: 1s;
 @keyframes title {
     0% {
         line-height: 0.9pt;
-        padding: 30vw;
         flex-wrap: wrap;
     }
     10% {
-        padding: 10vw;
     }
     80% {
+        font-size: 0.78vw;
         line-height: 0.3pt;
-        padding: 10vw;
     }
     95% {
         flex-direction: column-reverse;
     }
     100% {
         line-height: 0.9pt;
-        padding: 14vw;
     }
 }
 @keyframes button {
@@ -30,20 +27,26 @@ $title-anim-time: 1s;
     }
 }
 
-// title
-.title-box {
+// screens
+.screen {
+    height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+// title
+#title-box {
     justify-content: center;
-    height: 100vh;
     font-weight: bold;
 
     .title {
+        overflow-y: hidden;
         text-align: center;
         margin: 20vh 0;
         display: flex;
         flex-direction: column;
         animation: title $title-anim-time step-end 2 normal;
+        font-size: 0.9vw;
 
         > div {
             overflow-y: hidden;
@@ -55,28 +58,40 @@ $title-anim-time: 1s;
                 color: white;
             }
         }
-        // desktop
-        @media (min-width: $ipad) {
-            font-size: 0.9vw;
-        }
+
         // mobile
         @media (max-width: $ipad) {
             font-weight: 900;
             padding: 3vw;
-            font-size: 0.9vw;
             height: auto;
             width: 90vw;
         }
     }
-    a {
-        display: block;
-        text-align: center;
-        animation: button calc($title-anim-time + 0.3s) step-end normal;
+    .button {
+        animation: button calc(2 * $title-anim-time + 0.3s) step-end normal;
+    }
+}
+.button {
+    width: 100vw;
+    color: black;
+    display: block;
+    text-align: center;
+    font-size: 0.4vw;
+    span {
+        color: white;
     }
 }
 
+#listen {
+    justify-content: space-around;
+}
+
 //intro
-.intro {
+#intro {
     display: inline-block;
-    height: 100vh;
+
+    // desktop
+    @media (min-width: $ipad) {
+        padding: 0 30vw;
+    }
 }

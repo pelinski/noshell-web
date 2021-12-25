@@ -14,6 +14,6 @@ export const WindowSizeReporter = () => {
     return [width, height]
 };
 export const isDesktopView = () => {
-    const { width, _ } = useContext(WindowSizeContext);
+    const { width, _ } = useContext(WindowSizeContext) || { _, _ };
     return width > 812;
 };
