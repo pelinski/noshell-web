@@ -23,7 +23,6 @@ export const WindowScrollReporter = () => {
         setScrollY(window.scrollY);
     }));
     return [scrollY];
-
 };
 
 // calls to context
