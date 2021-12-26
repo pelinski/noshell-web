@@ -27,7 +27,6 @@ export const App = () => {
                         <Route path="/me" exact element={<AboutMePage />} />
                         <Route path="*" element={<Navigate to="/" replace />} />
                     </Routes>
-                    <Nav />
                 </Router>
             </WindowContext.Provider>
         </main>

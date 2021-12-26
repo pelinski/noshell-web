@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-scroll";
 import { isDesktopView } from "../api/api.window";
 
-export const ScrollDownButton = ({ scrollTo }) =>
-    <Link to={scrollTo} smooth={true} offset={isDesktopView() ? -50 : 0} duration={500} className="button">
+export const ScrollButton = ({ scrollTo, flip = false }) =>
+    <Link to={scrollTo} smooth={true} offset={0} duration={500} className={flip ? "button flip" : "button"}>
         _____<span>/\\\</span>________<span>/\\\</span>______<br />
         &nbsp;____<span>\/\\\</span>_______<span>\/\\\</span>______<br />
         &nbsp;&nbsp;____<span>\//\\\</span>______<span>/\\\</span>_______<br />
@@ -14,6 +14,7 @@ export const ScrollDownButton = ({ scrollTo }) =>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_________<span>\//\\\</span>____________<br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___________<span>\///</span>_____________<br />
     </Link >
+
 export const ScrollDownLargeButton = ({ scrollTo }) =>
     <Link to={scrollTo} smooth={true} offset={isDesktopView() ? -50 : 0} duration={500} className="button">
         __________<span>/\\\</span>_____________<br />
@@ -37,8 +38,8 @@ export const ScrollDownLargeButton = ({ scrollTo }) =>
     </Link >
 
 
-export const ScrollBasicButton = ({ scrollTo }) =>
-    <Link to={scrollTo} smooth={true} offset={isDesktopView() ? -50 : 0} duration={500}>
+export const ScrollBasicButton = ({ scrollTo, flip }) =>
+    <Link to={scrollTo} smooth={true} offset={0} duration={500} className={flip ? "button basic-button flip" : "button basic-button"}>
         | <br />
         | <br />
         | <br />

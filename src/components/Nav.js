@@ -15,3 +15,11 @@ export const Nav = () => {
             <Link to='/'>++thx for reading :-)--</Link>
         </nav>)
 }
+
+export const HomeNav = ({ expandIntro }) =>
+    <nav className='home-nav'>
+        {!expandIntro && <p>click to trigger text</p>}
+        <Link to='/read'>++read more--</Link>
+        <Link to='/me'>++about me--</Link>
+        <Link to='/'>++thx for reading :-)--</Link>
+    </nav>

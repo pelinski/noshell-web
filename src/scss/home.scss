@@ -72,10 +72,10 @@ $title-anim-time: 1s;
     }
 }
 .button {
-    width: 100vw;
     color: black;
     display: block;
     text-align: center;
+    margin-top: 5vh;
     span {
         color: white;
     }
@@ -86,6 +86,18 @@ $title-anim-time: 1s;
         font-size: 0.9vw;
     }
 }
+.flip {
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+}
+
+.basic-button {
+    color: white;
+    font-size: 1.1vh;
+}
 
 #listen {
     justify-content: space-around;
@@ -93,10 +105,38 @@ $title-anim-time: 1s;
 
 //intro
 #intro {
-    display: inline-block;
-
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     // desktop
     @media (min-width: $ipad) {
-        padding: 0 30vw;
+        //padding: 0 30vw;
+    }
+    .button {
+        overflow: hidden;
+    }
+
+    .content-wrapper {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .Typewriter {
+            height: 80%;
+            width: 70vw;
+        }
+
+        .home-nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: center;
+            align-self: center;
+            margin-bottom: 5vh;
+            width: 20vw;
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
