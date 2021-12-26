@@ -9,14 +9,14 @@ import { Nav } from "./components/Nav";
 import { Tldr } from "./pages/Tldr.page";
 import { VideoPage } from "./pages/Video.page";
 import { AboutMePage } from "./pages/AboutMe.page";
-import { WindowContext, WindowSizeReporter, WindowScrollReporter, isDesktopView, getScrollY } from "./api/api.window";
+import { WindowContext, WindowSizeReporter, WindowScrollReporter} from "./api/api.window";
 
 
 export const App = () => {
     [width, height] = WindowSizeReporter()
     [scrollY] = WindowScrollReporter()
     return (
-        <div id='wrapper'>
+        <main>
             <WindowContext.Provider value={{ width, height, scrollY }}>
                 <Router>
                     <Routes>
@@ -30,6 +30,6 @@ export const App = () => {
                     <Nav />
                 </Router>
             </WindowContext.Provider>
-        </div>
+        </main>
     )
 }

@@ -37,6 +37,7 @@ export const getScrollY = () => {
     return scrollY;
 }
 
-export const isOnScreen = ({ multiRef, screenId }) => (
-    multiRef.map.get(screenId)?.childBindings.domNode.offsetTop <= getScrollY()
-)
+export const isOnScreen = ({ multiRef, screenId }) => {
+    const screenPosition = multiRef.map.get(screenId)?.childBindings.domNode.offsetTop
+    return (screenPosition - window.innerHeight) <= getScrollY()
+}
