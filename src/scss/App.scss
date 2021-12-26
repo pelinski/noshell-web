@@ -1,0 +1,59 @@
+// font
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;900&display=swap");
+
+// vars
+$ipad: 812px;
+$green: rgb(74, 246, 38);
+
+// pages stylesheets
+@import "./home.scss";
+
+* {
+    background: black;
+    color: white;
+    font-family: "Inconsolata", monospace;
+    font-weight: 300;
+
+    // remove default button styling
+    button {
+        border: none;
+        background: none;
+    }
+
+    // scrollbar
+    overflow-x: hidden;
+    /* Chrome, safari */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: black;
+        border: 1px solid white;
+    }
+
+    /* Firefox */
+    .selector {
+        scrollbar-color: black !important;
+        background-color: black;
+        border: 1px solid white;
+    }
+}
+
+main {
+    @media (min-width: $ipad) {
+        // padding: 5vh 15vw;
+    }
+}
+nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.refs,
+.footnotes {
+    display: flex;
+    flex-wrap: wrap;
+    span {
+        padding: 6px 0 3px 0;
+    }
+}

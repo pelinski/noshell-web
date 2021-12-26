@@ -1,0 +1,142 @@
+// animation
+$title-anim-time: 1s;
+@keyframes title {
+    0% {
+        line-height: 0.9pt;
+        flex-wrap: wrap;
+    }
+    10% {
+    }
+    80% {
+        font-size: 0.78vw;
+        line-height: 0.3pt;
+    }
+    95% {
+        flex-direction: column-reverse;
+    }
+    100% {
+        line-height: 0.9pt;
+    }
+}
+@keyframes button {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// screens
+.screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+// title
+#title-box {
+    justify-content: center;
+    font-weight: bold;
+
+    .title {
+        overflow-y: hidden;
+        text-align: center;
+        margin: 20vh 0;
+        display: flex;
+        flex-direction: column;
+        animation: title $title-anim-time step-end 2 normal;
+        font-size: 0.9vw;
+
+        > div {
+            overflow-y: hidden;
+            // background
+            color: gray;
+            display: inline-block;
+            > span {
+                // letters
+                color: white;
+            }
+        }
+
+        // mobile
+        @media (max-width: $ipad) {
+            font-weight: 900;
+            padding: 3vw;
+            height: auto;
+            width: 90vw;
+        }
+    }
+    .button {
+        animation: button calc(2 * $title-anim-time + 0.3s) step-end normal;
+    }
+}
+.button {
+    color: black;
+    display: block;
+    text-align: center;
+    margin-top: 5vh;
+    span {
+        color: white;
+    }
+    @media (min-width: $ipad) {
+        font-size: 0.4vw;
+    }
+    @media (max-width: $ipad) {
+        font-size: 0.9vw;
+    }
+}
+.flip {
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+}
+
+.basic-button {
+    color: white;
+    font-size: 1.1vh;
+}
+
+#listen {
+    justify-content: space-around;
+}
+
+//intro
+#intro {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // desktop
+    @media (min-width: $ipad) {
+        //padding: 0 30vw;
+    }
+    .button {
+        overflow: hidden;
+    }
+
+    .content-wrapper {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .Typewriter {
+            height: 80%;
+            width: 70vw;
+        }
+
+        .home-nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: center;
+            align-self: center;
+            margin-bottom: 5vh;
+            width: 20vw;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

@@ -101,9 +101,8 @@ export const ParsedTitle = ({ type }) => {
 }
 
 export const Title = ({ type = "3d" }) =>
-    <div className="title-box">
+
         <div className="title">
             <ParsedTitle type={type} />
         </div>
-    </div>
 
