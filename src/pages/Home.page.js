@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Typewriter from 'typewriter-effect';
 import HtmlParser from "react-html-parser";
+import { scroller } from "react-scroll";
+
 
 import { Title } from "../components/Title";
 import { ScrollButton, ScrollBasicButton } from "../components/Buttons";
@@ -10,22 +12,21 @@ const IntroHtmlText = `<p>+</p> <p>hi i'm teresa pelinski and i trained a wavene
 
 export const HomePage = () => {
 
-
     return (
         <>
-            <div className='screen' id='title-box' tabIndex={0}>
+            <div className='screen' id='title-box' tabIndex={0} onKeyDown={(e) => arrowsHandler({ e, next: "listen" })}>
                 <Title type={'3d'} />
                 <ScrollButton scrollTo={'listen'} />
             </div>
-            <div className='screen' id='listen' tabIndex={1} >
+            <div className='screen' id='listen' tabIndex={1} onKeyDown={(e) => arrowsHandler({ e, prev: "title-box", next: "intro" })}>
                 <ScrollBasicButton scrollTo={'title-box'} flip={true} />
                 listen
                 <ScrollBasicButton scrollTo={'intro'} />
             </div>
             <Description />
-        </>
-    )
+        </>)
 }
+
 
 const Description = () => {
     const self = useRef()
@@ -43,7 +44,7 @@ const Description = () => {
 
     return (
         <div className='screen' id='intro' ref={self} onClick={() => setExpandIntro(true)}>
-            <ScrollBasicButton scrollTo={'listen'} flip={true} />
+            <ScrollBasicButton scrollTo={'listen'} flip={true} onKeyDown={(e) => arrowsHandler({ e, prev: "listen" })} />
             <div className="content-wrapper">
                 {expandIntro ? (
                     HtmlParser(`<div class="Typewriter"> ${IntroHtmlText}</div>`)
@@ -64,4 +65,11 @@ const Description = () => {
             </div>
         </div>
     )
+}
+
+const arrowsHandler = ({ e, prev, next }) => {
+    if (prev && e.key == "ArrowUp")
+        scroller.scrollTo(prev)
+    if (next && e.key == "ArrowDown")
+        scroller.scrollTo(next)
 }
