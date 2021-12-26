@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-scroll";
 
 export const ScrollButton = ({ scrollTo, flip = false }) =>
-    <Link to={scrollTo} smooth={true} offset={0} duration={500} className={flip ? "button flip" : "button"}>
+    <a onClick={scrollHandler(scrollTo)} className={flip ? "button flip" : "button"}>
         _____<span>/\\\</span>________<span>/\\\</span>______<br />
         &nbsp;____<span>\/\\\</span>_______<span>\/\\\</span>______<br />
         &nbsp;&nbsp;____<span>\//\\\</span>______<span>/\\\</span>_______<br />
@@ -12,10 +11,10 @@ export const ScrollButton = ({ scrollTo, flip = false }) =>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;________<span>\//\\\\\</span>___________<br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_________<span>\//\\\</span>____________<br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___________<span>\///</span>_____________<br />
-    </Link >
+    </a >
 
 export const ScrollDownLargeButton = ({ scrollTo }) =>
-    <Link to={scrollTo} smooth={true} offset={0} duration={500} className="button">
+    <a onClick={scrollHandler(scrollTo)} className="button">
         __________<span>/\\\</span>_____________<br />
         &nbsp;_________<span>\/\\\</span>_____________<br />
         &nbsp;&nbsp;_________<span>\/\\\</span>_____________<br />
@@ -34,14 +33,18 @@ export const ScrollDownLargeButton = ({ scrollTo }) =>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;________<span>\//\\\\\</span>___________<br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_________<span>\//\\\</span>____________<br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_________<span>\///</span>______________<br />
-    </Link >
+    </a >
 
 
 export const ScrollBasicButton = ({ scrollTo, flip }) =>
-    <Link to={scrollTo} smooth={true} offset={0} duration={500} className={flip ? "button basic-button flip" : "button basic-button"}>
+    <a onClick={scrollHandler(scrollTo)} className={flip ? "button basic-button flip" : "button basic-button"}>
         | <br />
         | <br />
         | <br />
         | <br />
         v < br />
-    </Link >
+    </a >
+
+
+const scrollHandler = (scrollTo) => () =>
+    document.getElementById(scrollTo)?.scrollIntoView({ behavior: "smooth" })

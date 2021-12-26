@@ -32,7 +32,6 @@
     "react-multi-ref": "^1.0.0",
     "react-player": "^2.9.0",
     "react-router-dom": "^6.0.2",
-    "react-scroll": "^1.8.4",
     "serve": "^13.0.2",
     "typewriter-effect": "^2.18.2"
   }

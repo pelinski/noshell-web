@@ -4251,14 +4251,6 @@ react-router@6.0.2:
   dependencies:
     history "^5.1.0"
 
-react-scroll@^1.8.4:
-  version "1.8.4"
-  resolved "https://registry.yarnpkg.com/react-scroll/-/react-scroll-1.8.4.tgz#7cc882d7058d5b5aedcd362b1de13c88d64ebe4c"
-  integrity sha512-J9rFqmdzularCXJoK2vleHVg2//y9Fs6zh7K13x7Yz3Y1kHPfQ/TTq029L09q1Gr5/5JjFLBOB2Sa3yYIqyTyQ==
-  dependencies:
-    lodash.throttle "^4.1.1"
-    prop-types "^15.7.2"
-
 react@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
