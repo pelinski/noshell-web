@@ -7,6 +7,7 @@ $green: rgb(74, 246, 38);
 
 // pages stylesheets
 @import "./home.scss";
+@import "./essay.scss";
 
 * {
     background: black;
@@ -55,5 +56,22 @@ nav {
     flex-wrap: wrap;
     span {
         padding: 6px 0 3px 0;
+    }
+}
+
+#tldr,
+#aboutme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    nav {
+        position: absolute;
+        bottom: 2vh;
+    }
+    p {
+        width: 70vw;
     }
 }

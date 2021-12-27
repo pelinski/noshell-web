@@ -10,45 +10,49 @@ const IntroHtmlText = `<p>+</p> <p>hi i'm teresa pelinski and i trained a wavene
 
 export const HomePage = () => {
 
-
     return (
         <>
-            <div className='screen' id='title-box' tabIndex={0}>
+            <div className='screen' id='title-box' tabIndex={0} onKeyDown={(e) => arrowsHandler({ e, next: "listen" })}>
                 <Title type={'3d'} />
                 <ScrollButton scrollTo={'listen'} />
             </div>
-            <div className='screen' id='listen' tabIndex={1} >
+            <div className='screen' id='listen' tabIndex={1} onKeyDown={(e) => arrowsHandler({ e, prev: "title-box", next: "intro" })}>
                 <ScrollBasicButton scrollTo={'title-box'} flip={true} />
                 listen
                 <ScrollBasicButton scrollTo={'intro'} />
             </div>
-            <Description />
-        </>
-    )
+            <Intro />
+        </>)
 }
 
-const Description = () => {
+
+const Intro = () => {
     const self = useRef()
     const [expandIntro, setExpandIntro] = useState(false)
+    const [isOnScreen, setIsOnScreen] = useState(false)
+
 
     useEffect(() => {
         const onScroll = () => {
             const dim = self.current?.getBoundingClientRect()
-            if (dim.top > window.innerHeight || dim.bottom < 0 || dim.left > window.innerWidth || dim.right < 0)
+            if (dim.top > window.innerHeight || dim.bottom < 0 || dim.left > window.innerWidth || dim.right < 0) { // if is outside of screen
+                setIsOnScreen(false)
                 setExpandIntro(false)
+            }
+            else // if its on screen
+                setIsOnScreen(true)
         }
         window.addEventListener('scroll', onScroll)
         return () => window.removeEventListener('scroll', onScroll)
     }, [])
 
     return (
-        <div className='screen' id='intro' ref={self} onClick={() => setExpandIntro(true)}>
+        <div className='screen' id='intro' ref={self} onClick={() => setExpandIntro(true)} tabIndex={2} onKeyDown={(e) => arrowsHandler({ e, prev: "listen" })}>
             <ScrollBasicButton scrollTo={'listen'} flip={true} />
             <div className="content-wrapper">
-                {expandIntro ? (
-                    HtmlParser(`<div class="Typewriter"> ${IntroHtmlText}</div>`)
-                ) : (
-                    <Typewriter
+                {expandIntro ?
+                    HtmlParser(`<div class="Typewriter"> ${IntroHtmlText}</div>`) :   // trigger all text if expandIntro
+                    isOnScreen && <Typewriter   // only load typewriter if on screen (otherwise it starts even if outside of screen)
                         options={{
                             strings: [IntroHtmlText],
                             autoStart: true,
@@ -56,12 +60,18 @@ const Description = () => {
                             delay: 50,
                             loop: true,
                             deleteSpeed: 0,
-                            wrapperClassName: "typewriter"
-                        }}
-                    />
-                )}
+                            wrapperClassName: "Typewriter"
+                        }} />
+                }
                 <HomeNav {...{ expandIntro }} />
             </div>
         </div>
     )
+}
+
+const arrowsHandler = ({ e, prev, next }) => {
+    if (prev && e.key == "ArrowUp")
+        document.getElementById(prev)?.scrollIntoView({ behavior: "smooth" })
+    if (next && e.key == "ArrowDown")
+        document.getElementById(next)?.scrollIntoView({ behavior: "smooth" })
 }
