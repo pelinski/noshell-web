@@ -51,9 +51,10 @@ export const EssayPage = () => {
                 <i>No Shell, Just a Voice</i> is voice generated with deep learning from a dataset of digitalized tape voice recordings. It does not attempt to answer any of the questions posed above, but to provide a new perspective on the issue. As Spawn, the voice in <i>No Shell, Just a Voice</i> is nothing more than the recordings it has been trained on. These recordings correspond to interviews my father, Ramón Pelinski, conducted during the 90s in Todolella, a small village in Els Ports region, in Castellón. These are part of his ethnomusicological research<FootnoteMark id={8} /> on the sword dance of Todolella. In the tapes, the elder and the young that inhabit Todolella and the ermitages in its surroundings talk about the life in the region in the past, what has changed, about the identity of the village and the sword dance. Most of the old are now deceased, and some of them I knew as a kid, as we spent long periods there during those years. Since the recordings were in cassette tapes, I listened to all these interviews during the process of digitalization. In the tapes there is much more than the voice of these people, the is also the silence, the flies, the cars passing by, the children screaming in the background. There is also the voice of my dad, that I had long not heard. The voice in <i>No Shell, Just a Voice</i> is not just a voice –if anything can be concluded, is that voices are never <i>just</i> voices–, it is a recording of a voice, a voice that has no language but does refer to a set of bodies. This project was a reflection on the voice in its direct, unseen, artificial and recorded forms, and also a process of (acousmatic) listening to voice recordings. Recordings that will, most probably, not be heard again.
             </p>
 
-            <span>-+-+-+-+-+-+-+-+-+-+-</span>
 
-            <div className="footnotes">
+
+            <div id="footnotes">
+                <span className="separator">-+-+-+-+-+-+-+-+-+-+-</span>
                 <FootNoteText id={1}>In Parreno's <i>Anywhere Out of the World</i> (2000), AnnLee says: "I am a product. A product freed from the marketplace I was supposed to fill... I was bought but strangely enough, I do not belong to anybody. I belong to whomever is able to fill me with any kind of imaginary material anywhere out of the world. I am an imaginary character. I am no ghost, just a shell." <QuoteMark id={"HuygheParreno2011"} num={2} /> </FootNoteText>
                 <FootNoteText id={2}>In greek, <i>akousma</i> means 'a thing heard' <QuoteMark id={"Young2015"} num={4} />.</FootNoteText>
                 <FootNoteText id={3}>Larousse definition cited in <QuoteMark id={"Chion2009"} num={5} />.</FootNoteText>
@@ -64,9 +65,11 @@ export const EssayPage = () => {
                 <FootNoteText id={8}>His research on the Todolellana sword dance, to which this interviews are part of, is published in <QuoteMark id={"Pelinski2011"} num={11} />.</FootNoteText >
             </div >
 
-            <span>-+-+-+-+-+-+-+-+-+-+-</span>
-            <h3>References</h3>
-            <div className='refs'>
+
+            <div id='refs'>
+                <span className="separator">-+-+-+-+-+-+-+-+-+-+-</span><br />
+                <h3>References</h3>
+
                 <span id='Paul2003'>[1] Christiane Paul. Digital Art. 1st. London, United Kingdom: Thames and Hudson Ltd, 2003, pp. 110–111.</span>
                 <span id='HuygheParreno2011'>[2] Pierre Huyghe and Philippe Parreno: No Ghost Just a Shell. url: <a href='https://icamiami.org/collection/'>https://icamiami.org/collection/various-artists-no-ghost-just-a-shell-no-ghost-just-a-shell-1999-2002/</a> (visited on 05/04/2021).</span>
                 <span id='Dolar2006'>[3] Mladen Dolar. A Voice and Nothing More. Ed. by Slavoj Žižek. 1st. Cambridge, Massachusetts: The MIT Press, 2006. isbn: 0-262-54187-4.</span>

@@ -51,6 +51,10 @@
             cursor: pointer;
             text-decoration: underline;
         }
+        h3 {
+            padding: 0;
+            margin-bottom: 0.5vh;
+        }
 
         @media (min-width: $ipad) {
             width: 70vw;
@@ -58,6 +62,19 @@
         @media (max-width: $ipad) {
             font-size: 0.85em;
             width: 80vw;
+        }
+    }
+
+    #refs,
+    #footnotes {
+        display: flex;
+        flex-wrap: wrap;
+        span {
+            padding: 6px 0 3px 0;
+        }
+        .separator {
+            width: 100vw;
+            text-align: center;
         }
     }
 }
