@@ -17,9 +17,7 @@
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html",
-    "start": "serve",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "serve"
   },
   "dependencies": {
     "beautiful-react-hooks": "^1.0.2",
