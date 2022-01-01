@@ -1,0 +1,69 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;900&display=swap');
+
+// vars
+$ipad: 812px;
+$green: #4af626;
+
+// pages stylesheets
+@import './home.scss';
+@import './essay.scss';
+
+* {
+	background: black;
+	color: white;
+	font-family: 'Inconsolata', monospace;
+	font-weight: 300;
+
+	// remove default button styling
+	button {
+		border: none;
+		background: none;
+	}
+
+	// scrollbar
+	overflow-x: hidden;
+	/* Chrome, safari */
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: black;
+		border: 1px solid white;
+	}
+
+	/* Firefox */
+	.selector {
+		scrollbar-color: black !important;
+		background-color: black;
+		border: 1px solid white;
+	}
+}
+
+main {
+	@media (min-width: $ipad) {
+		// padding: 5vh 15vw;
+	}
+}
+nav {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+#tldr,
+#aboutme {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	nav {
+		position: absolute;
+		bottom: 2vh;
+	}
+	p {
+		width: 70vw;
+	}
+}
