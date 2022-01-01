@@ -1,80 +1,80 @@
 #essay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    nav {
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        bottom: 5vh;
-        left: 2vw;
-    }
-    .title {
-        font-weight: 900;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 3vh;
-        font-size: 0.8vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	nav {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		bottom: 5vh;
+		left: 2vw;
+	}
+	.title {
+		font-weight: 900;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 3vh;
+		font-size: 0.8vw;
 
-        @media (min-width: $ipad) {
-            div {
-                color: black;
-                span {
-                    color: white;
-                }
-            }
-        }
-        @media (max-width: $ipad) {
-            background-color: white;
+		@media (min-width: $ipad) {
+			div {
+				color: black;
+				span {
+					color: white;
+				}
+			}
+		}
+		@media (max-width: $ipad) {
+			background-color: white;
 
-            div {
-                padding: 0.5vh;
-                background-color: white;
+			div {
+				padding: 0.5vh;
+				background-color: white;
 
-                color: white;
-            }
-            span {
-                color: black;
-            }
-        }
-    }
-    .text {
-        line-height: 1.1;
-        margin-top: 2vh;
-        display: flex;
-        flex-direction: column;
-        .footnotemark,
-        .footnotetext > sup,
-        .quotemark {
-            cursor: pointer;
-            text-decoration: underline;
-        }
-        h3 {
-            padding: 0;
-            margin-bottom: 0.5vh;
-        }
+				color: white;
+			}
+			span {
+				color: black;
+			}
+		}
+	}
+	.text {
+		line-height: 1.1;
+		margin-top: 2vh;
+		display: flex;
+		flex-direction: column;
+		.footnotemark,
+		.footnotetext > sup,
+		.quotemark {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+		h3 {
+			padding: 0;
+			margin-bottom: 0.5vh;
+		}
 
-        @media (min-width: $ipad) {
-            width: 70vw;
-        }
-        @media (max-width: $ipad) {
-            font-size: 0.85em;
-            width: 80vw;
-        }
-    }
+		@media (min-width: $ipad) {
+			width: 70vw;
+		}
+		@media (max-width: $ipad) {
+			font-size: 0.85em;
+			width: 80vw;
+		}
+	}
 
-    #refs,
-    #footnotes {
-        display: flex;
-        flex-wrap: wrap;
-        span {
-            padding: 6px 0 3px 0;
-        }
-        .separator {
-            width: 100vw;
-            text-align: center;
-        }
-    }
+	#refs,
+	#footnotes {
+		display: flex;
+		flex-wrap: wrap;
+		span {
+			padding: 6px 0 3px 0;
+		}
+		.separator {
+			width: 100vw;
+			text-align: center;
+		}
+	}
 }
