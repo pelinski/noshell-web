@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const ParsedTitle = ({ type }) => {
-	switch (type) {
+export const ParsedTitle: React.FC<{ titleStyle: string }> = ({
+	titleStyle = '3d',
+}): JSX.Element => {
+	switch (titleStyle) {
 		case '3d':
 			return (
 				<>
@@ -234,11 +236,13 @@ export const ParsedTitle = ({ type }) => {
 					</div>
 				</>
 			)
+		default:
+			return <></>
 	}
 }
 
-export const Title = ({ type = '3d' }) => (
+export const Title: React.FC<{ titleStyle: string }> = ({ titleStyle = '3d' }) => (
 	<div className='title'>
-		<ParsedTitle type={type} />
+		<ParsedTitle titleStyle={titleStyle} />
 	</div>
 )

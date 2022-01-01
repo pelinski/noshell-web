@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation, Link } from 'react-router-dom'
 
-export const Nav = () => {
+export const Nav: React.FC = (): JSX.Element => {
 	const isRead = useLocation().pathname == '/read'
 	const isVideo = useLocation().pathname == '/video'
 
@@ -15,7 +15,7 @@ export const Nav = () => {
 	)
 }
 
-export const HomeNav = ({ expandIntro }) => (
+export const HomeNav: React.FC<{ expandIntro: boolean }> = ({ expandIntro }): JSX.Element => (
 	<nav className='home-nav'>
 		{!expandIntro && <p>click to trigger text</p>}
 		<Link to='/read'>++read more--</Link>

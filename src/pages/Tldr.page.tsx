@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const Tldr = () => (
+export const Tldr: React.FC = (): JSX.Element => (
 	<div id='tldr'>
 		<h3>
 			++++-----

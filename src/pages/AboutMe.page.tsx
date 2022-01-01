@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const AboutMePage = () => (
+export const AboutMePage: React.FC = (): JSX.Element => (
 	<div id='aboutme'>
 		<nav>
 			<Link to={'/'}> +++go home </Link>

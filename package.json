@@ -8,6 +8,13 @@
 	"staticFiles": {
 		"staticPath": "public/"
 	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		]
+	},
 	"devDependencies": {
 		"@parcel/packager-raw-url": "^2.0.1",
 		"@parcel/transformer-sass": "^2.0.1",
@@ -17,11 +24,14 @@
 		"prettier": "^2.5.1"
 	},
 	"scripts": {
-		"build": "parcel build index.html",
+		"build": "parcel build index.html --public-url .",
 		"dev": "parcel index.html",
 		"start": "serve"
 	},
 	"dependencies": {
+		"@types/react": "^17.0.38",
+		"@types/react-dom": "^17.0.11",
+		"@types/react-html-parser": "^2.0.2",
 		"beautiful-react-hooks": "^1.0.2",
 		"parcel": "^2.0.1",
 		"react": "^17.0.2",

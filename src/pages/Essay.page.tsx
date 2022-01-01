@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 
 import { Title } from '../components/Title'
 
-export const EssayPage = () => {
+export const EssayPage: React.FC = (): JSX.Element => {
 	useEffect(() => {
 		window?.scrollTo(0, 0)
 	}) // scroll to top when mounting component
 
 	return (
 		<div id='essay'>
-			<Title type={'3d'} />
+			<Title titleStyle={'3d'} />
 
 			<nav>
 				<Link to={'/'}> +++go back-- </Link>
@@ -301,24 +301,24 @@ export const EssayPage = () => {
 	)
 }
 
-const scrollHandler = (scrollTo) => () =>
+const scrollHandler = (scrollTo: string) => (): void =>
 	document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })
 
-const FootnoteMark = ({ id }) => (
+const FootnoteMark: React.FC<{ id: string | number }> = ({ id }): JSX.Element => (
 	<sup className='footnotemark'>
 		<span id={`sup${id}`} onClick={scrollHandler(`fn${id}`)}>
 			{id}
 		</span>
 	</sup>
 )
-const FootNoteText = ({ id, children }) => (
+const FootNoteText: React.FC<{ id: string | number }> = ({ id, children }): JSX.Element => (
 	<span className='footnotetext' id={`fn${id}`} onClick={scrollHandler(`sup${id}`)}>
 		<sup>{id}</sup>
 		{children}
 	</span>
 )
 
-const QuoteMark = ({ id, num }) => (
+const QuoteMark: React.FC<{ id: string; num: string | number }> = ({ id, num }) => (
 	<span className='quotemark' onClick={scrollHandler(id)}>
 		[{num}]
 	</span>

@@ -1,6 +1,9 @@
 import React from 'react'
 
-export const ScrollButton = ({ scrollTo, flip = false }) => (
+export const ScrollButton: React.FC<{ scrollTo: string; flip?: boolean }> = ({
+	scrollTo,
+	flip = false,
+}) => (
 	<a onClick={scrollHandler(scrollTo)} className={flip ? 'button flip' : 'button'}>
 		_____<span>/\\\</span>________<span>/\\\</span>______
 		<br />
@@ -23,7 +26,7 @@ export const ScrollButton = ({ scrollTo, flip = false }) => (
 	</a>
 )
 
-export const ScrollDownLargeButton = ({ scrollTo }) => (
+export const ScrollDownLargeButton: React.FC<{ scrollTo: string }> = ({ scrollTo }) => (
 	<a onClick={scrollHandler(scrollTo)} className='button'>
 		__________<span>/\\\</span>_____________
 		<br />
@@ -73,7 +76,10 @@ export const ScrollDownLargeButton = ({ scrollTo }) => (
 	</a>
 )
 
-export const ScrollBasicButton = ({ scrollTo, flip }) => (
+export const ScrollBasicButton: React.FC<{ scrollTo: string; flip?: boolean }> = ({
+	scrollTo,
+	flip = false,
+}): JSX.Element => (
 	<a
 		onClick={scrollHandler(scrollTo)}
 		className={flip ? 'button basic-button flip' : 'button basic-button'}
@@ -86,5 +92,5 @@ export const ScrollBasicButton = ({ scrollTo, flip }) => (
 	</a>
 )
 
-const scrollHandler = (scrollTo) => () =>
+const scrollHandler = (scrollTo: string) => (): void =>
 	document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })

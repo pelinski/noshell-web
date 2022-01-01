@@ -2,7 +2,7 @@ import React from 'react'
 import ReactPlayer from 'react-player'
 import { Link } from 'react-router-dom'
 
-export const VideoPage = () => (
+export const VideoPage: React.FC = (): JSX.Element => (
 	<>
 		<nav>
 			<Link to={'/'}> +++go home </Link>
