@@ -4,7 +4,6 @@
 	"repository": "git@github.com:pelinski/noshell-web.git",
 	"author": "Teresa Pelinski <teresapelinski@gmail.com>",
 	"license": "MIT",
-	"homepage": "https://noshell.herokuapp.com/",
 	"staticFiles": {
 		"staticPath": "public/"
 	},

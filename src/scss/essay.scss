@@ -69,11 +69,12 @@
 	#footnotes {
 		display: flex;
 		flex-wrap: wrap;
+		flex-direction: column;
 		span {
 			padding: 6px 0 3px 0;
 		}
 		.separator {
-			width: 100vw;
+			width: 100%;
 			text-align: center;
 		}
 	}
