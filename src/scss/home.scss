@@ -101,6 +101,37 @@ $title-anim-time: 1s;
 
 #listen {
 	justify-content: space-around;
+	.audio-player {
+		border: 1px solid white;
+		width: 30vw;
+		height: 10vh;
+
+		input[type='range'] {
+			-webkit-appearance: none !important;
+			background: black;
+			border: 1px solid white;
+			height: 7px;
+
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none !important;
+				overflow: hidden;
+				border-radius: 0;
+				border: 1px solid white;
+				color: transparent;
+				background: black;
+				height: 10px;
+				width: 10px;
+			}
+
+			&::-moz-range-thumb {
+				overflow: hidden;
+				border-radius: 0;
+				background-color: transparent;
+				border: 1px solid white;
+				height: 7px;
+			}
+		}
+	}
 }
 
 //intro
