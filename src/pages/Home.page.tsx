@@ -35,13 +35,13 @@ export const HomePage: React.FC = (): JSX.Element => {
 	)
 }
 
-const Intro = () => {
+const Intro: React.FC = (): JSX.Element => {
 	const self = useRef<HTMLDivElement | null>(null)
-	const [expandIntro, setExpandIntro] = useState(false)
-	const [isOnScreen, setIsOnScreen] = useState(false)
+	const [expandIntro, setExpandIntro] = useState<boolean>(false)
+	const [isOnScreen, setIsOnScreen] = useState<boolean>(false)
 
 	useEffect(() => {
-		const onScroll = () => {
+		const onScroll = (): void => {
 			const dim = self.current?.getBoundingClientRect()
 			if (
 				dim &&
