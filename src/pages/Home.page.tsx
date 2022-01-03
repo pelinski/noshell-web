@@ -3,7 +3,6 @@ import Typewriter from 'typewriter-effect'
 import HtmlParser from 'react-html-parser'
 
 import { Title } from '../components/Title'
-import { ScrollButton, ScrollBasicButton } from '../components/Buttons'
 import { HomeNav } from '../components/Nav'
 import { AudioPlayer } from '../components/AudioPlayer'
 
@@ -19,7 +18,7 @@ export const HomePage: React.FC = (): JSX.Element => {
 				onKeyDown={(e) => arrowsHandler({ e, next: 'listen' })}
 			>
 				<Title titleStyle={'3d'} />
-				<ScrollButton scrollTo={'listen'} />
+				<ScrollArrow scrollTo={'listen'} />
 			</div>
 			<div
 				className='screen'
@@ -27,9 +26,9 @@ export const HomePage: React.FC = (): JSX.Element => {
 				tabIndex={1}
 				onKeyDown={(e) => arrowsHandler({ e, prev: 'title-box', next: 'intro' })}
 			>
-				<ScrollBasicButton scrollTo={'title-box'} flip={true} />
+				<ScrollArrow scrollTo={'title-box'} flip={true} />
 				<AudioPlayer audioSrc={'audio/just_a_voice_8.wav'} />
-				<ScrollBasicButton scrollTo={'intro'} />
+				<ScrollArrow scrollTo={'intro'} />
 			</div>
 			<Intro />
 		</>
@@ -70,7 +69,7 @@ const Intro: React.FC = (): JSX.Element => {
 			tabIndex={2}
 			onKeyDown={(e) => arrowsHandler({ e, prev: 'listen' })}
 		>
-			<ScrollBasicButton scrollTo={'listen'} flip={true} />
+			<ScrollArrow scrollTo={'listen'} flip={true} />
 			<div className='content-wrapper'>
 				{expandIntro
 					? HtmlParser(`<div class="Typewriter"> ${IntroHtmlText}</div>`) // trigger all text if expandIntro
@@ -92,6 +91,25 @@ const Intro: React.FC = (): JSX.Element => {
 		</div>
 	)
 }
+
+export const ScrollArrow: React.FC<{ scrollTo: string; flip?: boolean }> = ({
+	scrollTo,
+	flip = false,
+}): JSX.Element => (
+	<a
+		onClick={scrollHandler(scrollTo)}
+		className={flip ? 'button basic-button flip' : 'button basic-button'}
+	>
+		| <br />
+		| <br />
+		| <br />
+		| <br />
+		v <br />
+	</a>
+)
+
+const scrollHandler = (scrollTo: string) => (): void =>
+	document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })
 
 const arrowsHandler = ({
 	e,
