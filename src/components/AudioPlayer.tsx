@@ -20,7 +20,7 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 			} else {
 				setTrackProgress(audioRef.current.currentTime)
 			}
-		}, [1000])
+		}, 1000)
 	}
 
 	useEffect(() => {
