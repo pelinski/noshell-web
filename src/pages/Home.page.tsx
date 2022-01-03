@@ -26,9 +26,8 @@ export const HomePage: React.FC = (): JSX.Element => {
 				tabIndex={1}
 				onKeyDown={(e) => arrowsHandler({ e, prev: 'title-box', next: 'intro' })}
 			>
-				<ScrollArrow scrollTo={'title-box'} flip={true} />
+				<ScrollArrows prevScrollTo={'title-box'} nextScrollTo={'intro'} />
 				<AudioPlayer audioSrc={'audio/just_a_voice_8.wav'} />
-				<ScrollArrow scrollTo={'intro'} />
 			</div>
 			<Intro />
 		</>
@@ -96,16 +95,33 @@ export const ScrollArrow: React.FC<{ scrollTo: string; flip?: boolean }> = ({
 	scrollTo,
 	flip = false,
 }): JSX.Element => (
-	<a
-		onClick={scrollHandler(scrollTo)}
-		className={flip ? 'button basic-button flip' : 'button basic-button'}
-	>
+	<a onClick={scrollHandler(scrollTo)} className={flip ? 'button flip' : 'button'}>
 		| <br />
 		| <br />
 		| <br />
 		| <br />
 		v <br />
 	</a>
+)
+
+export const ScrollArrows: React.FC<{ prevScrollTo: string; nextScrollTo: string }> = ({
+	prevScrollTo,
+	nextScrollTo,
+}): JSX.Element => (
+	<div className='arrows'>
+		<a onClick={scrollHandler(prevScrollTo)} className='flip'>
+			| <br />
+			| <br />
+			| <br />
+			v <br />
+		</a>
+		<a onClick={scrollHandler(nextScrollTo)}>
+			| <br />
+			| <br />
+			| <br />
+			v <br />
+		</a>
+	</div>
 )
 
 const scrollHandler = (scrollTo: string) => (): void =>
