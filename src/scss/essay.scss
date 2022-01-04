@@ -19,8 +19,7 @@
 		font-size: 0.8vw;
 		> div {
 			display: flex;
-			justify-content: center;
-			width: 80vw;
+			padding: 1vh 0;
 		}
 
 		@media (min-width: $ipad) {
