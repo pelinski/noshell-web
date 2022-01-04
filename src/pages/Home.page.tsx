@@ -29,15 +29,15 @@ export const HomePage: React.FC = (): JSX.Element => {
 				<ScrollArrows prevScrollTo={'title-box'} nextScrollTo={'intro'} />
 				<div className='audios'>
 					<div>
-						<span>1. Archivo</span>
+						<span>1. archivo ---></span>
 						<AudioPlayer audioSrc={'audio/just_a_voice_8.wav'} />
 					</div>
 					<div>
-						<span>2. Proceso</span>
+						<span>2. proceso ---></span>
 						<AudioPlayer audioSrc={'audio/just_a_voice_8.wav'} />
 					</div>
 					<div>
-						<span>3. Voz</span>
+						<span>3. voz -------></span>
 						<AudioPlayer audioSrc={'audio/just_a_voice_8.wav'} />
 					</div>
 				</div>

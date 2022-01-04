@@ -56,36 +56,40 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 		}
 		startTimer()
 	}
+	const thumbPosition = (): number => {
+		const thumbWidth = 7
+		const sliderWidth = sliderRef.current ? sliderRef.current.getBoundingClientRect().width : 0
+		const thumbPosition = (sliderWidth * trackProgress) / duration
+		if (trackProgress > duration - thumbWidth) return thumbPosition - thumbWidth - 3
+		// so that thumb does not get out of slider
+		else return thumbPosition
+	}
 	return (
 		<div className='audio-player'>
-			<div className='audio-controls'>
-				{isPlaying ? (
-					<button
-						type='button'
-						className='pause'
-						onClick={() => setIsPlaying(false)}
-						aria-label='Pause'
-					>
-						<img src={require('url:~public/icons/pause.svg')} alt='pause button' />
-					</button>
-				) : (
-					<button
-						type='button'
-						className='play'
-						onClick={() => setIsPlaying(true)}
-						aria-label='Play'
-					>
-						<img src={require('url:~public/icons/play.svg')} alt='play button' />
-					</button>
-				)}
-			</div>
+			{isPlaying ? (
+				<button
+					type='button'
+					className='pause'
+					onClick={() => setIsPlaying(false)}
+					aria-label='Pause'
+				>
+					<img src={require('url:~public/icons/pause.svg')} alt='pause button' />
+				</button>
+			) : (
+				<button
+					type='button'
+					className='play'
+					onClick={() => setIsPlaying(true)}
+					aria-label='Play'
+				>
+					<img src={require('url:~public/icons/play.svg')} alt='play button' />
+				</button>
+			)}
+			<div>---&nbsp;</div>
 			<div className='slider' ref={sliderRef}>
 				<div
 					style={{
-						left: sliderRef.current
-							? (sliderRef.current.getBoundingClientRect().width * trackProgress) /
-							  100
-							: 0,
+						left: thumbPosition(),
 					}}
 				/>
 				{console.log(sliderRef, sliderRef.current)}
@@ -94,12 +98,13 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 					value={trackProgress}
 					step='1'
 					min='0'
-					max={duration ? duration : `${duration}`}
+					max={duration + 3.5}
 					onChange={(e) => onScrub(e.target.value)}
 					onMouseUp={onScrubEnd}
 					onKeyUp={onScrubEnd}
 				/>
 			</div>
+			<div>&nbsp;---+</div>
 		</div>
 	)
 }
