@@ -1,8 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="50pt" height="50pt" version="1.1" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g>
-        <path d="m171.9 0h100.16v560h-100.16z" fill-rule="evenodd" style="fill:none;stroke:white;stroke-width:10px" />
-        <path d="m427.95 0h100.16v560h-100.16z" fill-rule="evenodd" style="fill:none;stroke:white;stroke-width:10px" />
-    </g>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.52 50.83">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+                stroke: #fff;
+                stroke-miterlimit: 10;
+                stroke-width: 0.83px;
+            }
+        </style>
+    </defs>
+    <title>pause</title>
+    <path class="cls-1" d="M.42.42H8.76v50H.42Z" />
+    <path class="cls-1" d="M21.75.42H30.1v50H21.75Z" />
 </svg>

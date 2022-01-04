@@ -1,7 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="50pt" height="50pt" version="1.1" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g>
-        <path d="m546 280-392-229.6v459.2z" style="fill:none;stroke:white;stroke-width:10px" />
-    </g>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.41 51.29">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+                stroke: #fff;
+                stroke-miterlimit: 10;
+                stroke-width: 0.83px;
+            }
+        </style>
+    </defs>
+    <title>play</title>
+    <path class="cls-1" d="M30.75,25.64.42.88V50.41Z" />
 </svg>

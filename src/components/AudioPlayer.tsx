@@ -5,6 +5,7 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 
 	//refs
 	const audioRef = useRef<HTMLAudioElement>(new Audio(audioSrc))
+	const sliderRef = useRef<HTMLDivElement | null>(null)
 	const [trackProgress, setTrackProgress] = useState<number>(0)
 	const intervalRef = useRef<any>(null)
 
@@ -78,17 +79,27 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 					</button>
 				)}
 			</div>
-			<input
-				type='range'
-				value={trackProgress}
-				step='1'
-				min='0'
-				max={duration ? duration : `${duration}`}
-				className='progress'
-				onChange={(e) => onScrub(e.target.value)}
-				onMouseUp={onScrubEnd}
-				onKeyUp={onScrubEnd}
-			/>
+			<div className='slider' ref={sliderRef}>
+				<div
+					style={{
+						left: sliderRef.current
+							? (sliderRef.current.getBoundingClientRect().width * trackProgress) /
+							  100
+							: 0,
+					}}
+				/>
+				{console.log(sliderRef, sliderRef.current)}
+				<input
+					type='range'
+					value={trackProgress}
+					step='1'
+					min='0'
+					max={duration ? duration : `${duration}`}
+					onChange={(e) => onScrub(e.target.value)}
+					onMouseUp={onScrubEnd}
+					onKeyUp={onScrubEnd}
+				/>
+			</div>
 		</div>
 	)
 }

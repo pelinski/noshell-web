@@ -27,7 +27,20 @@ export const HomePage: React.FC = (): JSX.Element => {
 				onKeyDown={(e) => arrowsHandler({ e, prev: 'title-box', next: 'intro' })}
 			>
 				<ScrollArrows prevScrollTo={'title-box'} nextScrollTo={'intro'} />
-				<AudioPlayer audioSrc={'audio/just_a_voice_8.wav'} />
+				<div className='audios'>
+					<div>
+						<span>1. Archivo</span>
+						<AudioPlayer audioSrc={'audio/just_a_voice_8.wav'} />
+					</div>
+					<div>
+						<span>2. Proceso</span>
+						<AudioPlayer audioSrc={'audio/just_a_voice_8.wav'} />
+					</div>
+					<div>
+						<span>3. Voz</span>
+						<AudioPlayer audioSrc={'audio/just_a_voice_8.wav'} />
+					</div>
+				</div>
 			</div>
 			<Intro />
 		</>
