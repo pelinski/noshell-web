@@ -26,7 +26,7 @@ export const HomePage: React.FC = (): JSX.Element => {
 				tabIndex={1}
 				onKeyDown={(e) => arrowsHandler({ e, prev: 'title-box', next: 'intro' })}
 			>
-				<ScrollArrows prevScrollTo={'title-box'} nextScrollTo={'intro'} />
+				<ScrollArrowSide scrollTo={'intro'} side={"left"} flip={true}/>
 				<div className='audios'>
 					<div>
 						<span>1. archivo ---></span>
@@ -41,6 +41,8 @@ export const HomePage: React.FC = (): JSX.Element => {
 						<AudioPlayer audioSrc={'audio/just_a_voice_8.wav'} />
 					</div>
 				</div>
+				<ScrollArrowSide scrollTo={'intro'} side={"right"} />
+
 			</div>
 			<Intro />
 		</>
@@ -117,25 +119,23 @@ export const ScrollArrow: React.FC<{ scrollTo: string; flip?: boolean }> = ({
 	</a>
 )
 
-export const ScrollArrows: React.FC<{ prevScrollTo: string; nextScrollTo: string }> = ({
-	prevScrollTo,
-	nextScrollTo,
+export const ScrollArrowSide: React.FC<{ scrollTo: string, side:string, flip?:boolean  }> = ({
+	scrollTo,
+	side,
+	flip=false
 }): JSX.Element => (
-	<div className='arrows'>
-		<a onClick={scrollHandler(prevScrollTo)} className='flip'>
+	<div className={`arrow ${side}`}>
+		<a onClick={scrollHandler(scrollTo)} className={flip ? `flip ${side}` : `${side}`}>
 			| <br />
 			| <br />
 			| <br />
 			v <br />
 		</a>
-		<a onClick={scrollHandler(nextScrollTo)}>
-			| <br />
-			| <br />
-			| <br />
-			v <br />
-		</a>
+		
 	</div>
 )
+
+
 
 const scrollHandler = (scrollTo: string) => (): void =>
 	document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })

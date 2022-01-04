@@ -232,15 +232,24 @@ $title-anim-time: 1s;
 		}
 	}
 
-	.arrows {
+	.arrow {
 		overflow: hidden;
-		position: relative;
-		font-size: 1.1vh;
-		top: 40vh;
-		left: 2vw;
+		position: absolute;
+		top: 100vh;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		width: 5vw;
 		margin-top: 0;
 		text-align: right;
+		&.left {
+			left: 2vw;
+		}
+		&.right {
+			right: 2vw;
+		}
 		a {
 			display: block;
 			text-align: center;
