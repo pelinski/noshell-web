@@ -41,7 +41,7 @@ export const HomePage: React.FC = (): JSX.Element => {
 						<AudioPlayer audioSrc={'audio/just_a_voice_8.wav'} />
 					</div>
 				</div>
-				<ScrollArrowSide scrollTo={'title-boxn'} side={"right"} />
+				<ScrollArrowSide scrollTo={'title-box'} side={"right"} />
 
 			</div>
 			<Intro />

@@ -3,6 +3,8 @@
 
 // vars
 $ipad: 812px;
+$phone: 430px;
+
 $green: #4af626;
 $title-font-size: 0.9vw;
 
@@ -188,9 +190,19 @@ $title-anim-time: 1s;
 			padding-bottom: 4vh;
 			display: flex;
 			flex-direction: row;
+			@media (max-width: $phone) {
+				flex-direction: column;
+			}
+
 			> span {
-				display: flex;
-				align-self: center;
+				@media (min-width: $phone) {
+					display: flex;
+					align-self: center;
+				}
+				@media (max-width: $phone) {
+					position: relative;
+					left: 0;
+				}
 			}
 		}
 		.audio-player {
@@ -215,6 +227,9 @@ $title-anim-time: 1s;
 				height: 7px;
 				width: 20vw;
 				overflow: hidden;
+				@media (max-width: $phone) {
+					width: 30vw;
+				}
 				div {
 					// thumb
 					position: absolute;
@@ -260,10 +275,10 @@ $title-anim-time: 1s;
 		font-size: 12pt;
 
 		&.left {
-			left: 2vw;
+			left: 3vw;
 		}
 		&.right {
-			right: 2vw;
+			right: 3vw;
 		}
 		a {
 			transform: rotate(-90deg);
@@ -296,6 +311,9 @@ $title-anim-time: 1s;
 		.Typewriter {
 			height: 85%;
 			width: 70vw;
+			@media (max-width: $phone) {
+				width: 80vw;
+			}
 		}
 		> p {
 			position: absolute;
@@ -308,6 +326,9 @@ $title-anim-time: 1s;
 				position: absolute;
 				bottom: -2 * 100vh + 4vh;
 				text-align: center;
+			}
+			@media (max-width: $phone) {
+				width: 0px;
 			}
 		}
 
@@ -330,6 +351,9 @@ $title-anim-time: 1s;
 			@media (max-height: 480px) {
 				flex-direction: row;
 				flex-wrap: wrap;
+			}
+			@media (max-width: $phone) {
+				font-size: 10pt;
 			}
 		}
 	}
