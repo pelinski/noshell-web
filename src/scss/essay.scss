@@ -17,6 +17,10 @@
 		align-items: center;
 		margin-top: 3vh;
 		font-size: 0.8vw;
+		> div {
+			display: flex;
+			padding: 1vh 0;
+		}
 
 		@media (min-width: $ipad) {
 			div {

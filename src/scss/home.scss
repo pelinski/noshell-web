@@ -33,7 +33,6 @@ $title-anim-time: 1s;
 	display: flex;
 	flex-direction: column;
 }
-
 // title
 #title-box {
 	justify-content: center;
@@ -42,18 +41,26 @@ $title-anim-time: 1s;
 	.title {
 		overflow-y: hidden;
 		text-align: center;
-		margin-top: 20vh;
 		margin-bottom: 5vh;
 		display: flex;
 		flex-direction: column;
 		animation: title $title-anim-time step-end 2 normal;
 		font-size: $title-font-size;
 
-		> div {
+		div {
 			overflow-y: hidden;
 			// background
 			color: black;
 			display: inline-block;
+			@media (max-width: $ipad) {
+				font-size: 2 * $title-font-size;
+			}
+			@media (max-height: $rot) {
+				font-size: 1.1 * $title-font-size;
+			}
+			> div {
+				padding: 1vh 0;
+			}
 			> span {
 				// letters
 				color: white;
@@ -62,6 +69,7 @@ $title-anim-time: 1s;
 
 		// mobile
 		@media (max-width: $ipad) {
+			margin: 0;
 			font-weight: 900;
 			padding: 3vw;
 			height: auto;
@@ -72,9 +80,10 @@ $title-anim-time: 1s;
 		animation: button calc(2 * $title-anim-time + 0.3s) step-end normal;
 	}
 }
+
+////
 .button {
 	width: 100vw;
-
 	display: flex;
 	justify-content: center;
 	text-align: center;
@@ -246,7 +255,7 @@ $title-anim-time: 1s;
 			bottom: -2 * 100vh;
 			right: 5vw;
 			font-size: 10pt;
-			@media (max-height: 480px) {
+			@media (max-height: $rot) {
 				left: 0;
 				width: 100vw;
 				position: absolute;
@@ -274,7 +283,7 @@ $title-anim-time: 1s;
 			margin-bottom: 5vh;
 			height: fit-content;
 
-			@media (max-height: 480px) {
+			@media (max-height: $rot) {
 				flex-direction: row;
 				flex-wrap: wrap;
 			}
