@@ -5,3 +5,5 @@ yarn-error.log
 .vscode/
 TODO.txt
 .DS_Store
+public/audio/
+
