@@ -41,7 +41,7 @@ export const HomePage: React.FC = (): JSX.Element => {
 						<AudioPlayer audioSrc={'audio/just_a_voice_8.wav'} />
 					</div>
 				</div>
-				<ScrollArrowSide scrollTo={'intro'} side={"right"} />
+				<ScrollArrowSide scrollTo={'info'} side={"right"} />
 
 			</div>
 			<Intro />
@@ -111,11 +111,7 @@ export const ScrollArrow: React.FC<{ scrollTo: string; flip?: boolean }> = ({
 	flip = false,
 }): JSX.Element => (
 	<a onClick={scrollHandler(scrollTo)} className={flip ? 'button flip' : 'button'}>
-		| <br />
-		| <br />
-		| <br />
-		| <br />
-		v <br />
+		<div>----></div>
 	</a>
 )
 
@@ -126,11 +122,7 @@ export const ScrollArrowSide: React.FC<{ scrollTo: string, side:string, flip?:bo
 }): JSX.Element => (
 	<div className={`arrow ${side}`}>
 		<a onClick={scrollHandler(scrollTo)} className={flip ? `flip ${side}` : `${side}`}>
-			| <br />
-			| <br />
-			| <br />
-			v <br />
-		</a>
+		----></a>
 		
 	</div>
 )
