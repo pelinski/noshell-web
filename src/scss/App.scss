@@ -294,11 +294,30 @@ $title-anim-time: 1s;
 		flex-direction: column;
 		justify-content: space-between;
 		.Typewriter {
-			height: 75%;
+			height: 85%;
 			width: 70vw;
+		}
+		> p {
+			position: absolute;
+			bottom: -2 * 100vh;
+			right: 5vw;
+			font-size: 10pt;
+			@media (max-height: 480px) {
+				left: 0;
+				width: 100vw;
+				position: absolute;
+				bottom: -2 * 100vh + 4vh;
+				text-align: center;
+			}
 		}
 
 		.home-nav {
+			p {
+				margin: 0;
+			}
+			width: fit-content;
+			position: absolute;
+			bottom: -2 * 100vh-3vh;
 			display: flex;
 			flex-direction: column;
 			flex-wrap: nowrap;
@@ -307,7 +326,11 @@ $title-anim-time: 1s;
 			align-self: center;
 			margin-bottom: 5vh;
 			height: fit-content;
-			width: 20vw;
+
+			@media (max-height: 480px) {
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
 		}
 	}
 }

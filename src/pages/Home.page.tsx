@@ -41,7 +41,7 @@ export const HomePage: React.FC = (): JSX.Element => {
 						<AudioPlayer audioSrc={'audio/just_a_voice_8.wav'} />
 					</div>
 				</div>
-				<ScrollArrowSide scrollTo={'info'} side={"right"} />
+				<ScrollArrowSide scrollTo={'title-boxn'} side={"right"} />
 
 			</div>
 			<Intro />
@@ -100,7 +100,8 @@ const Intro: React.FC = (): JSX.Element => {
 								}}
 							/>
 					  )}
-				<HomeNav {...{ expandIntro }} />
+					  		{!expandIntro && <p>click to trigger text</p>}
+				<HomeNav  />
 			</div>
 		</div>
 	)

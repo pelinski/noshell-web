@@ -15,9 +15,8 @@ export const Nav: React.FC = (): JSX.Element => {
 	)
 }
 
-export const HomeNav: React.FC<{ expandIntro: boolean }> = ({ expandIntro }): JSX.Element => (
+export const HomeNav: React.FC = (): JSX.Element => (
 	<nav className='home-nav'>
-		{!expandIntro && <p>click to trigger text</p>}
 		<Link to='/read'>++read more--</Link>
 		<Link to='/me'>++about me--</Link>
 		<Link to='/'>++thx for reading :-)--</Link>
