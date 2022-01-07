@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export const AboutMePage: React.FC = (): JSX.Element => (
 	<div id='aboutme'>
 		<nav>
-			<Link to={'/'}> +++go home </Link>
+			<Link to={'/read'}> +++go back </Link>
 		</nav>
 		<p>
 			i am teresa pelinski, a phd researcher in artificial intelligence and music at the queen

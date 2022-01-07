@@ -17,7 +17,7 @@ export const Tldr: React.FC = (): JSX.Element => (
 			<AudioPlayer audioSrc={'audio/with-the-voice.wav'} />
 		</div>
 		<nav>
-			<Link to={'/'}> +++go home </Link>
+			<Link to={'/read'}> +++go back</Link>
 		</nav>
 	</div>
 )

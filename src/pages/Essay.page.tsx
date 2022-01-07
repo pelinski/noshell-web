@@ -14,6 +14,9 @@ export const EssayPage: React.FC = (): JSX.Element => {
 
 			<nav>
 				<Link to={'/'}> +++go back-- </Link>
+				<Link to={'/me'}> +++about me-- </Link>
+				<Link to={'/video'}> +++videos-- </Link>
+
 				<Link to={'/tldr'}> +++tldr;--</Link>
 			</nav>
 
@@ -294,7 +297,7 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					<span id='Pelinski2011'>
 						[11] Ramón Pelinski. La Danza de Todolella. Memoria, historia y usos
 						políticos de la danza de espadas. 1st. Valencia, España: Institut Valencià
-						de la Música \& Generalitat Valenciana, 2011. isbn: 9788448256548.
+						de la Música & Generalitat Valenciana, 2011. isbn: 9788448256548.
 					</span>
 				</div>
 			</div>

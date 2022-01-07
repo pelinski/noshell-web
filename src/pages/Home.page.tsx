@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import Typewriter from 'typewriter-effect'
 import HtmlParser from 'react-html-parser'
 
 import { Title } from '../components/Title'
-import { HomeNav } from '../components/Nav'
 import { AudioPlayer } from '../components/AudioPlayer'
 
 const IntroHtmlText = `<p>+</p> 
@@ -11,7 +11,6 @@ const IntroHtmlText = `<p>+</p>
  <p>+</p>`
 
 
- //the video corresponds to mounted mini dv tape videos i recorded in september 2020 in an abandoned megaconstruction in north-central spain (ciudad del medioambiente, soria).
 
 export const HomePage: React.FC = (): JSX.Element => {
 	return (
@@ -106,7 +105,9 @@ const Intro: React.FC = (): JSX.Element => {
 							/>
 					  )}
 					  		{!expandIntro && <p>click to trigger text</p>}
-				<HomeNav  />
+							  <nav className='home-nav'>
+		<Link to='/read'>++read more--</Link>
+	</nav>
 			</div>
 		</div>
 	)

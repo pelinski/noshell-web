@@ -81,4 +81,23 @@ nav {
 		}
 	}
 }
+
+#video {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	> nav {
+		position: absolute;
+		bottom: 5vh;
+	}
+	> div {
+		width: 40%;
+	}
+	> span {
+		width: 40%;
+		padding-right: 15vw;
+	}
+}
 ///
