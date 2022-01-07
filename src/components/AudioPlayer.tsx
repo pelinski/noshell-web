@@ -57,10 +57,11 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 		}
 		startTimer()
 	}
-	const thumbPosition = (): number => {
+	const thumbPosition = (): number | string => {
 		const thumbWidth = 7
 		const sliderWidth = sliderRef.current ? sliderRef.current.getBoundingClientRect().width : 0
 		const thumbPosition = (sliderWidth * trackProgress) / duration
+		if (!trackProgress) return `${thumbPosition - thumbWidth - 3}`
 		if (trackProgress > duration - thumbWidth) return thumbPosition - thumbWidth - 3
 		// so that thumb does not get out of slider
 		else return thumbPosition
@@ -98,7 +99,7 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 					value={trackProgress}
 					step='1'
 					min='0'
-					max={duration + 3.5}
+					max={duration ? duration + 3.5 : `${duration + 3.5}`}
 					onChange={(e) => onScrub(e.target.value)}
 					onMouseUp={onScrubEnd}
 					onKeyUp={onScrubEnd}
