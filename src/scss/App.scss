@@ -12,6 +12,7 @@ $title-font-size: 0.9vw;
 // pages stylesheets
 @import './home.scss';
 @import './essay.scss';
+@import './videos.scss';
 
 * {
 	background: black;
@@ -55,6 +56,31 @@ nav {
 	flex-wrap: wrap;
 }
 
+.button {
+	cursor: pointer;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	user-select: none;
+	height: 15%;
+	color: white;
+	font-size: 12pt;
+	overflow: hidden;
+
+	div {
+		display: flex;
+		align-items: center;
+		width: fit-content;
+		bottom: 10vh;
+		transform: rotate(90deg);
+	}
+
+	&.flip {
+		transform: scale(1, -1);
+	}
+}
+
 #tldr,
 #aboutme {
 	position: absolute;
@@ -81,23 +107,3 @@ nav {
 		}
 	}
 }
-
-#video {
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	> nav {
-		position: absolute;
-		bottom: 5vh;
-	}
-	> div {
-		width: 40%;
-	}
-	> span {
-		width: 40%;
-		padding-right: 15vw;
-	}
-}
-///

@@ -5,12 +5,11 @@ import HtmlParser from 'react-html-parser'
 
 import { Title } from '../components/Title'
 import { AudioPlayer } from '../components/AudioPlayer'
+import { ScrollArrow, ScrollArrowSide, arrowsHandler } from '../components/Arrows'
 
 const IntroHtmlText = `<p>+</p> 
 <p>hi i'm teresa pelinski and i generated an artificial voice using a couple of hours of my dad's field recordings and wavenet, a neural synthesis model. my dad, ramón pelinski, was an ethnomusicologist and he studied the sword dance at la todolella, a very small village close to castellón, in eastern spain. in these tapes, he interviews the old and the young who inhabit la todolella and asks them about how their lives have changed thorough the ages and how cultural identity is represented through music. these tapes were recorded during the 90s.</p> <p>i found these tapes in a wooden mountain of boxes in his office. my dad does not live anymore, so i guess they do technically belong to me. there are a lot of tapes in his office. are they going to be ever listened again? or will someone just throw them away when i die? this project is about many things, but mainly about listening. in the tapes, there is a voice asking questions: my dad's. this is a voice i had long not heard. i listened to his questions for hours in the process of digitalising the tapes. </p> <p> this project is also about listening to the body that emits this artificial voice. is there such a body? dolar, chion and schaeffer talk about the object in the voice and i collect some of their ideas in the essay you can read <a href="/read">here</a>.</p>
  <p>+</p>`
-
-
 
 export const HomePage: React.FC = (): JSX.Element => {
 	return (
@@ -30,23 +29,22 @@ export const HomePage: React.FC = (): JSX.Element => {
 				tabIndex={1}
 				onKeyDown={(e) => arrowsHandler({ e, prev: 'title-box', next: 'intro' })}
 			>
-				<ScrollArrowSide scrollTo={'intro'} side={"left"} flip={true}/>
+				<ScrollArrowSide scrollTo={'intro'} side={'left'} flip={true} />
 				<div className='audios'>
 					<div>
-						<span>1. archivo ---></span>
+						<span>1. archivo ---{'>'}</span>
 						<AudioPlayer audioSrc={'audio/interview-sample.wav'} />
 					</div>
 					<div>
-						<span>2. proceso ---></span>
+						<span>2. proceso ---{'>'}</span>
 						<AudioPlayer audioSrc={'audio/process.wav'} />
 					</div>
 					<div>
-						<span>3. voz -------></span>
+						<span>3. voz -------{'>'}</span>
 						<AudioPlayer audioSrc={'audio/just-a-voice.wav'} />
 					</div>
 				</div>
-				<ScrollArrowSide scrollTo={'title-box'} side={"right"} />
-
+				<ScrollArrowSide scrollTo={'title-box'} side={'right'} />
 			</div>
 			<Intro />
 		</>
@@ -104,52 +102,11 @@ const Intro: React.FC = (): JSX.Element => {
 								}}
 							/>
 					  )}
-					  		{!expandIntro && <p>click to trigger text</p>}
-							  <nav className='home-nav'>
-		<Link to='/read'>++read more--</Link>
-	</nav>
+				{!expandIntro && <p>click to trigger text</p>}
+				<nav className='home-nav'>
+					<Link to='/read'>++read more--</Link>
+				</nav>
 			</div>
 		</div>
 	)
-}
-
-export const ScrollArrow: React.FC<{ scrollTo: string; flip?: boolean }> = ({
-	scrollTo,
-	flip = false,
-}): JSX.Element => (
-	<a onClick={scrollHandler(scrollTo)} className={flip ? 'button flip' : 'button'}>
-		<div>----></div>
-	</a>
-)
-
-export const ScrollArrowSide: React.FC<{ scrollTo: string, side:string, flip?:boolean  }> = ({
-	scrollTo,
-	side,
-	flip=false
-}): JSX.Element => (
-	<div className={`arrow ${side}`}>
-		<a onClick={scrollHandler(scrollTo)} className={flip ? `flip ${side}` : `${side}`}>
-		----></a>
-		
-	</div>
-)
-
-
-
-const scrollHandler = (scrollTo: string) => (): void =>
-	document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })
-
-const arrowsHandler = ({
-	e,
-	prev,
-	next,
-}: {
-	e: React.KeyboardEvent<HTMLDivElement>
-	prev?: string
-	next?: string
-}): void => {
-	if (prev && e.key == 'ArrowUp')
-		document.getElementById(prev)?.scrollIntoView({ behavior: 'smooth' })
-	if (next && e.key == 'ArrowDown')
-		document.getElementById(next)?.scrollIntoView({ behavior: 'smooth' })
 }

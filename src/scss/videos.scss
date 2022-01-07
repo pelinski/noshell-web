@@ -1,0 +1,61 @@
+#videos {
+	> nav {
+		position: fixed;
+		bottom: 5vh;
+		left: 2vw;
+	}
+	#video-1,
+	#video-2 {
+		width: 100vw;
+		height: 100vh;
+
+		a {
+			position: absolute;
+		}
+	}
+	#video-1 {
+		a {
+			bottom: 5vh;
+		}
+	}
+	#video-2 {
+		a {
+			bottom: -100vh + 5vh;
+		}
+	}
+
+	.video {
+		height: 95vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		> div {
+			width: 40%;
+		}
+		> span {
+			width: 40%;
+			padding-right: 15vw;
+		}
+
+		@media (max-width: $ipad) {
+			flex-direction: column;
+			> div {
+				width: 70vw;
+			}
+			> span {
+				width: 70vw;
+				padding-right: 0;
+				margin-top: 2vh;
+			}
+		}
+	}
+	#video-2 {
+		.video {
+			flex-direction: column;
+			> span {
+				padding-right: 0;
+				margin-top: 2vh;
+			}
+		}
+	}
+}
