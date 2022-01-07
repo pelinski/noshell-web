@@ -92,7 +92,6 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 						left: thumbPosition(),
 					}}
 				/>
-				{console.log(sliderRef, sliderRef.current)}
 				<input
 					type='range'
 					value={trackProgress}

@@ -45,8 +45,8 @@ $title-font-size: 0.9vw;
 }
 
 main {
-	@media (min-width: $ipad) {
-		// padding: 5vh 15vw;
+	.title {
+		user-select: none;
 	}
 }
 nav {
