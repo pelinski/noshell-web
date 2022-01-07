@@ -52,6 +52,10 @@
 	#video-2 {
 		.video {
 			flex-direction: column;
+
+			img {
+				width: 70vw;
+			}
 			> span {
 				padding-right: 0;
 				margin-top: 2vh;

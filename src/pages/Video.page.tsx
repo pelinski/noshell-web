@@ -27,15 +27,14 @@ export const VideoPage: React.FC = (): JSX.Element => {
 					<img
 						style={{
 							display: showVideo ? 'none' : 'inline',
-							width: 0.6 * window.innerWidth,
 						}}
 						onClick={() => setShowVideo(true)}
 						src={require('url:~public/thumbnail.png')}
 					/>
-					<div style={{ display: showVideo ? 'inline' : 'none' }}>
+					<div className='player' style={{ display: showVideo ? 'inline' : 'none' }}>
 						<ReactPlayer
+							width={0.7 * window.innerWidth}
 							playing={showVideo}
-							width={0.6 * window.innerWidth}
 							url='https://youtu.be/ikx-Uhnh_d8?t=584'
 						/>
 					</div>
