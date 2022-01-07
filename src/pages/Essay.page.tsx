@@ -47,7 +47,7 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					The <i>akousmatikoi</i>
 					<FootnoteMark id={2} /> or acousmatics were Pythagoras' disciples who received
 					the teachings of their master behind a curtain. The purpose of hiding
-					Pythagoras' body from the sight of his students, was likely avoiding visual
+					Pythagoras' body from the sight of his students was likely avoiding visual
 					distractions caused by the master gestures or appearance. As Mladen Dolar notes,
 					there is something mystical in a voice whose emitting source remains unseen:
 					"the voice whose source cannot be seen, because it cannot be located, seems to
@@ -67,12 +67,13 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					object and provides a language for describing the sounds <i>in themselves</i>.
 					This is particularly interesting in the case of the voice, that can be a vehicle
 					of meaning (convey a message through speech) and simultaneously be a source of
-					aesthetic admiration. Yet, what is that becomes omnipresent in the voice of
-					Pythagoras behind the veil? Is there something else to the voice than being a
-					vehicle of meaning and a source of a aesthetic admiration? In Dolar's words,
-					there is an 'object voice' that "does not solidify an object of fetish
-					reverence, but [is] an object which functions as a blind spot in the call and as
-					a disturbance of aesthetic appreciation" <QuoteMark id={'Dolar2006'} num={3} />.
+					aesthetic admiration <QuoteMark id={'Dolar2006'} num={3} />. Yet, what is that
+					becomes omnipresent in the voice of Pythagoras behind the veil? Is there
+					something else to the voice than being a vehicle of meaning and a source of a
+					aesthetic admiration? In Dolar's words, there is an 'object voice' that "does
+					not solidify an object of fetish reverence, but [is] an object which functions
+					as a blind spot in the call and as a disturbance of aesthetic appreciation"{' '}
+					<QuoteMark id={'Dolar2006'} num={3} />.
 				</p>
 				<p>
 					The inventions of the phonograph, the radio or the telephone turn the
@@ -101,11 +102,11 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					<QuoteMark id={'Chion1999'} num={8} />) introduces the figure of the{' '}
 					<i> acousmêtre</i> to name the acousmatic voices whose faces have not yet been
 					seen, and the <i> visualized acousmêtre</i> to refer to the voices whose face we
-					already know.However, this difference assumes that there is indeed a face –and
-					by extension, a body– that has produced this voice.Artificially generated
+					already know. However, this difference assumes that there is indeed a face –and
+					by extension, a body– that has produced this voice. Artificially generated
 					voices, that do not have a body to hide behind a veil, defy this difference and
-					raise the fundamental question: are artificial voices acousmêtres ? And if so,
-					what body is it that is hidden behind the veil ?
+					raise the fundamental question: are artificial voices acousmêtres? And if so,
+					what body is it that is hidden behind the veil?
 				</p>
 
 				<h3>Artificially generated voices without a body </h3>
@@ -139,7 +140,7 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					<QuoteMark id={'HerndonDryhurst2019'} num={10} />. Herndon does not only give a
 					body to Spawn but an ensemble of bodies, the full chorus who trained it. A
 					rephrasing of Herndon could be: "Spawn is an acousmêtre and behind the veil
-					there's the ensemble of voices who trained it".
+					there is the ensemble of voices who trained it".
 				</p>
 
 				<h3>
@@ -151,25 +152,25 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					of the questions posed above, but to provide a new perspective on the issue. As
 					Spawn, the voice in <i>No Shell, Just a Voice</i> is nothing more than the
 					recordings it has been trained on. These recordings correspond to interviews my
-					father, Ramón Pelinski, conducted during the 90s in Todolella, a small village
-					in Els Ports region, in Castellón. These are part of his ethnomusicological
-					research
-					<FootnoteMark id={8} /> on the sword dance of Todolella. In the tapes, the elder
-					and the young that inhabit Todolella and the ermitages in its surroundings talk
-					about the life in the region in the past, what has changed, about the identity
-					of the village and the sword dance. Most of the old are now deceased, and some
-					of them I knew as a kid, as we spent long periods there during those years.
-					Since the recordings were in cassette tapes, I listened to all these interviews
-					during the process of digitalization. In the tapes there is much more than the
-					voice of these people, the is also the silence, the flies, the cars passing by,
-					the children screaming in the background. There is also the voice of my dad,
-					that I had long not heard. The voice in <i>No Shell, Just a Voice</i> is not
-					just a voice –if anything can be concluded, is that voices are never <i>just</i>{' '}
-					voices–, it is a recording of a voice, a voice that has no language but does
-					refer to a set of bodies. This project was a reflection on the voice in its
-					direct, unseen, artificial and recorded forms, and also a process of
-					(acousmatic) listening to voice recordings. Recordings that will, most probably,
-					not be heard again.
+					father, Ramón Pelinski, conducted during the 90s in la Todolella, a small
+					village in Els Ports region, in Castellón. These are part of his
+					ethnomusicological research
+					<FootnoteMark id={8} /> on the sword dance of la Todolella. In the tapes, the
+					elder and the young that inhabit la Todolella and the ermitages in its
+					surroundings talk about the life in the region in the past, what has changed,
+					about the identity of the village and the sword dance. Most of the old are now
+					deceased, and some of them I knew as a kid, as we spent long periods there
+					during those years. Since the recordings were in cassette tapes, I listened to
+					all these interviews during the process of digitalisation. In the tapes there is
+					much more than the voice of these people, the is also the silence, the flies,
+					the cars passing by, the children screaming in the background. There is also the
+					voice of my dad, that I had long not heard. The voice in{' '}
+					<i>No Shell, Just a Voice</i> is not just a voice –if anything can be concluded,
+					is that voices are never <i>just</i> voices–, it is a recording of a voice, a
+					voice that has no language but does refer to a set of bodies. This project was a
+					reflection on the voice in its direct, unseen, artificial and recorded forms,
+					and also a process of (acousmatic) listening to voice recordings. Recordings
+					that will, most probably, not be heard again.
 				</p>
 
 				<div id='footnotes'>
