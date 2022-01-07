@@ -1,0 +1,76 @@
+// vars
+$phone: 430px;
+
+// mixins
+@mixin thumbStyle {
+	appearance: none;
+	background: none;
+	opacity: 0;
+	border: 0;
+	width: 7px;
+	height: 7px;
+}
+
+// src
+.AudioPlayer {
+	height: fit-content;
+	display: flex;
+	position: relative;
+
+	button {
+		height: 50px;
+		cursor: pointer;
+		width: 32px;
+		overflow: hidden;
+	}
+
+	p {
+		user-select: none;
+		display: flex;
+		align-items: center;
+		word-wrap: initial;
+		width: auto;
+	}
+
+	> div {
+		position: relative;
+		align-self: center;
+		right: 0;
+		border: 1px solid white;
+		height: 7px;
+		width: 20vw;
+		overflow: hidden;
+		display: grid;
+
+		@media (max-width: $phone) {
+			width: 30vw;
+		}
+		div {
+			// thumb
+			cursor: pointer;
+			position: absolute;
+			border-left: 1px solid white;
+			border-right: 1px solid white;
+			height: inherit;
+			width: 7px; // thumb-width
+		}
+
+		input {
+			cursor: pointer;
+			appearance: none;
+			height: inherit;
+			background: transparent;
+			margin: 0;
+			width: 100%;
+			grid-area: 1/1;
+
+			&::-webkit-slider-thumb {
+				@include thumbStyle();
+			}
+
+			&::-moz-range-thumb {
+				@include thumbStyle();
+			}
+		}
+	}
+}
