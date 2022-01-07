@@ -67,8 +67,17 @@ nav {
 		position: absolute;
 		bottom: 2vh;
 	}
-	p {
+	> p,
+	> h3,
+	> .audio {
 		width: 70vw;
+	}
+	@media (min-width: $ipad) {
+		> p,
+		> h3,
+		.audio {
+			width: 30vw;
+		}
 	}
 }
 ///
