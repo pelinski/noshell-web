@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import style from '../scss/AudioPlayer.module.scss'
 
 export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.Element => {
 	const [isPlaying, setIsPlaying] = useState<boolean>(false)
@@ -65,7 +66,7 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 		else return thumbPosition
 	}
 	return (
-		<div className='audio-player'>
+		<div className={style.AudioPlayer}>
 			{isPlaying ? (
 				<button
 					type='button'
@@ -85,7 +86,7 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 					<img src={require('url:~public/icons/play.svg')} alt='play button' />
 				</button>
 			)}
-			<div>---&nbsp;</div>
+			<p>---&nbsp;</p>
 			<div className='slider' ref={sliderRef}>
 				<div
 					style={{
@@ -103,7 +104,7 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 					onKeyUp={onScrubEnd}
 				/>
 			</div>
-			<div>&nbsp;---+</div>
+			<p>&nbsp;---+</p>
 		</div>
 	)
 }

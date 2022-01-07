@@ -107,14 +107,6 @@ $title-anim-time: 1s;
 	}
 }
 
-@mixin thumbStyle {
-	appearance: none;
-	background: none;
-	opacity: 0;
-	border: 0;
-	width: 7px;
-	height: 7px;
-}
 #listen {
 	.audios {
 		height: 100vh;
@@ -140,66 +132,6 @@ $title-anim-time: 1s;
 				@media (max-width: $phone) {
 					position: relative;
 					left: 0;
-				}
-			}
-		}
-		.audio-player {
-			height: fit-content;
-			display: flex;
-			position: relative;
-			button {
-				height: 50px;
-				cursor: pointer;
-				width: 32px;
-				overflow: hidden;
-			}
-			> div {
-				user-select: none;
-				display: flex;
-				align-items: center;
-				word-wrap: initial;
-				width: auto;
-			}
-			.slider {
-				position: relative;
-				align-self: center;
-				right: 0;
-				border: 1px solid white;
-				height: 7px;
-				width: 20vw;
-				overflow: hidden;
-
-				@media (max-width: $phone) {
-					width: 30vw;
-				}
-				div {
-					// thumb
-					cursor: pointer;
-					position: absolute;
-					border-left: 1px solid white;
-					border-right: 1px solid white;
-					height: inherit;
-					width: 7px; // thumb-width
-				}
-
-				input {
-					cursor: pointer;
-					appearance: none;
-					height: inherit;
-					position: absolute;
-					background: transparent;
-					top: 0;
-					left: 0;
-					margin: 0;
-					width: 100%;
-
-					&::-webkit-slider-thumb {
-						@include thumbStyle();
-					}
-
-					&::-moz-range-thumb {
-						@include thumbStyle();
-					}
 				}
 			}
 		}
