@@ -3,11 +3,16 @@
 
 // vars
 $ipad: 812px;
+$phone: 430px;
+$rot: 480px;
+
 $green: #4af626;
+$title-font-size: 0.9vw;
 
 // pages stylesheets
 @import './home.scss';
 @import './essay.scss';
+@import './videos.scss';
 
 * {
 	background: black;
@@ -41,8 +46,8 @@ $green: #4af626;
 }
 
 main {
-	@media (min-width: $ipad) {
-		// padding: 5vh 15vw;
+	.title {
+		user-select: none;
 	}
 }
 nav {
@@ -51,8 +56,36 @@ nav {
 	flex-wrap: wrap;
 }
 
+.button {
+	cursor: pointer;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	user-select: none;
+	height: 15%;
+	color: white;
+	font-size: 12pt;
+	overflow: hidden;
+
+	div {
+		display: flex;
+		align-items: center;
+		width: fit-content;
+		bottom: 10vh;
+		transform: rotate(90deg);
+	}
+
+	&.flip {
+		transform: scale(1, -1);
+	}
+}
+
 #tldr,
-#aboutme {
+#aboutme,
+#tech {
+	position: absolute;
+	top: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -63,7 +96,15 @@ nav {
 		position: absolute;
 		bottom: 2vh;
 	}
-	p {
+	> p,
+	> h3,
+	> .audio {
 		width: 70vw;
+	}
+	@media (min-width: $ipad) {
+		> h3,
+		> .audio {
+			width: 30vw;
+		}
 	}
 }

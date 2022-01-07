@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Title } from '../components/Title'
-
+import { FootnoteMark, FootnoteText, QuoteMark } from '../components/References'
 export const EssayPage: React.FC = (): JSX.Element => {
 	useEffect(() => {
 		window?.scrollTo(0, 0)
@@ -14,6 +14,9 @@ export const EssayPage: React.FC = (): JSX.Element => {
 
 			<nav>
 				<Link to={'/'}> +++go back-- </Link>
+				<Link to={'/me'}> +++about me-- </Link>
+				<Link to={'/video'}> +++videos-- </Link>
+				<Link to={'/tech'}> +++tech notes--</Link>
 				<Link to={'/tldr'}> +++tldr;--</Link>
 			</nav>
 
@@ -47,7 +50,7 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					The <i>akousmatikoi</i>
 					<FootnoteMark id={2} /> or acousmatics were Pythagoras' disciples who received
 					the teachings of their master behind a curtain. The purpose of hiding
-					Pythagoras' body from the sight of his students, was likely avoiding visual
+					Pythagoras' body from the sight of his students was likely avoiding visual
 					distractions caused by the master gestures or appearance. As Mladen Dolar notes,
 					there is something mystical in a voice whose emitting source remains unseen:
 					"the voice whose source cannot be seen, because it cannot be located, seems to
@@ -67,12 +70,13 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					object and provides a language for describing the sounds <i>in themselves</i>.
 					This is particularly interesting in the case of the voice, that can be a vehicle
 					of meaning (convey a message through speech) and simultaneously be a source of
-					aesthetic admiration. Yet, what is that becomes omnipresent in the voice of
-					Pythagoras behind the veil? Is there something else to the voice than being a
-					vehicle of meaning and a source of a aesthetic admiration? In Dolar's words,
-					there is an 'object voice' that "does not solidify an object of fetish
-					reverence, but [is] an object which functions as a blind spot in the call and as
-					a disturbance of aesthetic appreciation" <QuoteMark id={'Dolar2006'} num={3} />.
+					aesthetic admiration <QuoteMark id={'Dolar2006'} num={3} />. Yet, what is that
+					becomes omnipresent in the voice of Pythagoras behind the veil? Is there
+					something else to the voice than being a vehicle of meaning and a source of a
+					aesthetic admiration? In Dolar's words, there is an 'object voice' that "does
+					not solidify an object of fetish reverence, but [is] an object which functions
+					as a blind spot in the call and as a disturbance of aesthetic appreciation"{' '}
+					<QuoteMark id={'Dolar2006'} num={3} />.
 				</p>
 				<p>
 					The inventions of the phonograph, the radio or the telephone turn the
@@ -101,11 +105,11 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					<QuoteMark id={'Chion1999'} num={8} />) introduces the figure of the{' '}
 					<i> acousmêtre</i> to name the acousmatic voices whose faces have not yet been
 					seen, and the <i> visualized acousmêtre</i> to refer to the voices whose face we
-					already know.However, this difference assumes that there is indeed a face –and
-					by extension, a body– that has produced this voice.Artificially generated
+					already know. However, this difference assumes that there is indeed a face –and
+					by extension, a body– that has produced this voice. Artificially generated
 					voices, that do not have a body to hide behind a veil, defy this difference and
-					raise the fundamental question: are artificial voices acousmêtres ? And if so,
-					what body is it that is hidden behind the veil ?
+					raise the fundamental question: are artificial voices acousmêtres? And if so,
+					what body is it that is hidden behind the veil?
 				</p>
 
 				<h3>Artificially generated voices without a body </h3>
@@ -139,7 +143,7 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					<QuoteMark id={'HerndonDryhurst2019'} num={10} />. Herndon does not only give a
 					body to Spawn but an ensemble of bodies, the full chorus who trained it. A
 					rephrasing of Herndon could be: "Spawn is an acousmêtre and behind the veil
-					there's the ensemble of voices who trained it".
+					there is the ensemble of voices who trained it".
 				</p>
 
 				<h3>
@@ -151,45 +155,45 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					of the questions posed above, but to provide a new perspective on the issue. As
 					Spawn, the voice in <i>No Shell, Just a Voice</i> is nothing more than the
 					recordings it has been trained on. These recordings correspond to interviews my
-					father, Ramón Pelinski, conducted during the 90s in Todolella, a small village
-					in Els Ports region, in Castellón. These are part of his ethnomusicological
-					research
-					<FootnoteMark id={8} /> on the sword dance of Todolella. In the tapes, the elder
-					and the young that inhabit Todolella and the ermitages in its surroundings talk
-					about the life in the region in the past, what has changed, about the identity
-					of the village and the sword dance. Most of the old are now deceased, and some
-					of them I knew as a kid, as we spent long periods there during those years.
-					Since the recordings were in cassette tapes, I listened to all these interviews
-					during the process of digitalization. In the tapes there is much more than the
-					voice of these people, the is also the silence, the flies, the cars passing by,
-					the children screaming in the background. There is also the voice of my dad,
-					that I had long not heard. The voice in <i>No Shell, Just a Voice</i> is not
-					just a voice –if anything can be concluded, is that voices are never <i>just</i>{' '}
-					voices–, it is a recording of a voice, a voice that has no language but does
-					refer to a set of bodies. This project was a reflection on the voice in its
-					direct, unseen, artificial and recorded forms, and also a process of
-					(acousmatic) listening to voice recordings. Recordings that will, most probably,
-					not be heard again.
+					father, Ramón Pelinski, conducted during the 90s in la Todolella, a small
+					village in Els Ports region, in Castellón. These are part of his
+					ethnomusicological research
+					<FootnoteMark id={8} /> on the sword dance of la Todolella. In the tapes, the
+					elder and the young that inhabit la Todolella and the ermitages in its
+					surroundings talk about the life in the region in the past, what has changed,
+					about the identity of the village and the sword dance. Most of the old are now
+					deceased, and some of them I knew as a kid, as we spent long periods there
+					during those years. Since the recordings were in cassette tapes, I listened to
+					all these interviews during the process of digitalisation. In the tapes there is
+					much more than the voice of these people, the is also the silence, the flies,
+					the cars passing by, the children screaming in the background. There is also the
+					voice of my dad, that I had long not heard. The voice in{' '}
+					<i>No Shell, Just a Voice</i> is not just a voice –if anything can be concluded,
+					is that voices are never <i>just</i> voices–, it is a recording of a voice, a
+					voice that has no language but does refer to a set of bodies. This project was a
+					reflection on the voice in its direct, unseen, artificial and recorded forms,
+					and also a process of (acousmatic) listening to voice recordings. Recordings
+					that will, most probably, not be heard again.
 				</p>
 
 				<div id='footnotes'>
 					<span className='separator'>-+-+-+-+-+-+-+-+-+-+-</span>
-					<FootNoteText id={1}>
+					<FootnoteText id={1}>
 						In Parreno's <i>Anywhere Out of the World</i> (2000), AnnLee says: "I am a
 						product. A product freed from the marketplace I was supposed to fill... I
 						was bought but strangely enough, I do not belong to anybody. I belong to
 						whomever is able to fill me with any kind of imaginary material anywhere out
 						of the world. I am an imaginary character. I am no ghost, just a shell."{' '}
 						<QuoteMark id={'HuygheParreno2011'} num={2} />{' '}
-					</FootNoteText>
-					<FootNoteText id={2}>
+					</FootnoteText>
+					<FootnoteText id={2}>
 						In greek, <i>akousma</i> means 'a thing heard'{' '}
 						<QuoteMark id={'Young2015'} num={4} />.
-					</FootNoteText>
-					<FootNoteText id={3}>
+					</FootnoteText>
+					<FootnoteText id={3}>
 						Larousse definition cited in <QuoteMark id={'Chion2009'} num={5} />.
-					</FootNoteText>
-					<FootNoteText id={4}>
+					</FootnoteText>
+					<FootnoteText id={4}>
 						Schaeffer reading of Husselr’s texts directly influences his systematical
 						description of the sound object in the <i>Traité des Objets Musicaux</i>{' '}
 						<QuoteMark id={'Kane2014'} num={6} />
@@ -203,26 +207,26 @@ export const EssayPage: React.FC = (): JSX.Element => {
 						it.With reference to the sound object, Schaeffer states that "the sound
 						object is never revealed clearly except in the acousmatic experience"{' '}
 						<QuoteMark id={'Kane2014'} num={6} />.
-					</FootNoteText>
-					<FootNoteText id={5}>
+					</FootnoteText>
+					<FootnoteText id={5}>
 						In Schaeffer’s words, cited in <QuoteMark id={'Kane2014'} num={6} />: "In
 						ancient times, the apparatus was a curtain; today, it is the radio and the
 						methods of reproduction, with the whole set of electro-acoustic
 						transformations, that place us, modern listeners to an invisible voice,
 						under similar circumstances".
-					</FootNoteText>
-					<FootNoteText id={6}>
+					</FootnoteText>
+					<FootnoteText id={6}>
 						Examples of this are the first appearance of the murder in <i>M</i> by Fritz
 						Lang (1931) or the mother’s voice in <i>Psycho</i> by Alfred Hitchcock
 						(1960), both mentioned by Chion in <QuoteMark id={'Chion1999'} num={8} />.
-					</FootNoteText>
-					<FootNoteText id={7}>
+					</FootnoteText>
+					<FootnoteText id={7}>
 						Cited in <QuoteMark id={'Butler2019'} num={9} />.
-					</FootNoteText>
-					<FootNoteText id={8}>
+					</FootnoteText>
+					<FootnoteText id={8}>
 						His research on the Todolellana sword dance, to which this interviews are
 						part of, is published in <QuoteMark id={'Pelinski2011'} num={11} />.
-					</FootNoteText>
+					</FootnoteText>
 				</div>
 
 				<div id='refs'>
@@ -293,33 +297,10 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					<span id='Pelinski2011'>
 						[11] Ramón Pelinski. La Danza de Todolella. Memoria, historia y usos
 						políticos de la danza de espadas. 1st. Valencia, España: Institut Valencià
-						de la Música \& Generalitat Valenciana, 2011. isbn: 9788448256548.
+						de la Música & Generalitat Valenciana, 2011. isbn: 9788448256548.
 					</span>
 				</div>
 			</div>
 		</div>
 	)
 }
-
-const scrollHandler = (scrollTo: string) => (): void =>
-	document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })
-
-const FootnoteMark: React.FC<{ id: string | number }> = ({ id }): JSX.Element => (
-	<sup className='footnotemark'>
-		<span id={`sup${id}`} onClick={scrollHandler(`fn${id}`)}>
-			{id}
-		</span>
-	</sup>
-)
-const FootNoteText: React.FC<{ id: string | number }> = ({ id, children }): JSX.Element => (
-	<span className='footnotetext' id={`fn${id}`} onClick={scrollHandler(`sup${id}`)}>
-		<sup>{id}</sup>
-		{children}
-	</span>
-)
-
-const QuoteMark: React.FC<{ id: string; num: string | number }> = ({ id, num }) => (
-	<span className='quotemark' onClick={scrollHandler(id)}>
-		[{num}]
-	</span>
-)

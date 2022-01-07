@@ -6,6 +6,8 @@ import { EssayPage } from './pages/Essay.page'
 import { Tldr } from './pages/Tldr.page'
 import { VideoPage } from './pages/Video.page'
 import { AboutMePage } from './pages/AboutMe.page'
+import { TechPage } from './pages/Tech.page'
+
 
 export const App: React.FC = (): JSX.Element => (
 	<main>
@@ -16,6 +18,7 @@ export const App: React.FC = (): JSX.Element => (
 				<Route path='/tldr' element={<Tldr />} />
 				<Route path='/video' element={<VideoPage />} />
 				<Route path='/me' element={<AboutMePage />} />
+				<Route path='/tech' element={<TechPage />} />
 				<Route path='*' element={<Navigate to='/' replace />} />
 			</Routes>
 		</Router>

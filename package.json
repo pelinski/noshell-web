@@ -4,7 +4,6 @@
 	"repository": "git@github.com:pelinski/noshell-web.git",
 	"author": "Teresa Pelinski <teresapelinski@gmail.com>",
 	"license": "MIT",
-	"homepage": "https://noshell.herokuapp.com/",
 	"staticFiles": {
 		"staticPath": "public/"
 	},
@@ -26,7 +25,8 @@
 	"scripts": {
 		"build": "parcel build index.html --public-url .",
 		"dev": "parcel index.html",
-		"start": "serve"
+		"start": "serve",
+		"clean-cache": "rm -r dist/ .parcel-cache/"
 	},
 	"dependencies": {
 		"@types/react": "^17.0.38",
