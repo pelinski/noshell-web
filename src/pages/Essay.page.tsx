@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Title } from '../components/Title'
-
+import { FootnoteMark, FootnoteText, QuoteMark } from '../components/References'
 export const EssayPage: React.FC = (): JSX.Element => {
 	useEffect(() => {
 		window?.scrollTo(0, 0)
@@ -16,7 +16,7 @@ export const EssayPage: React.FC = (): JSX.Element => {
 				<Link to={'/'}> +++go back-- </Link>
 				<Link to={'/me'}> +++about me-- </Link>
 				<Link to={'/video'}> +++videos-- </Link>
-
+				<Link to={'/tech'}> +++tech notes--</Link>
 				<Link to={'/tldr'}> +++tldr;--</Link>
 			</nav>
 
@@ -178,22 +178,22 @@ export const EssayPage: React.FC = (): JSX.Element => {
 
 				<div id='footnotes'>
 					<span className='separator'>-+-+-+-+-+-+-+-+-+-+-</span>
-					<FootNoteText id={1}>
+					<FootnoteText id={1}>
 						In Parreno's <i>Anywhere Out of the World</i> (2000), AnnLee says: "I am a
 						product. A product freed from the marketplace I was supposed to fill... I
 						was bought but strangely enough, I do not belong to anybody. I belong to
 						whomever is able to fill me with any kind of imaginary material anywhere out
 						of the world. I am an imaginary character. I am no ghost, just a shell."{' '}
 						<QuoteMark id={'HuygheParreno2011'} num={2} />{' '}
-					</FootNoteText>
-					<FootNoteText id={2}>
+					</FootnoteText>
+					<FootnoteText id={2}>
 						In greek, <i>akousma</i> means 'a thing heard'{' '}
 						<QuoteMark id={'Young2015'} num={4} />.
-					</FootNoteText>
-					<FootNoteText id={3}>
+					</FootnoteText>
+					<FootnoteText id={3}>
 						Larousse definition cited in <QuoteMark id={'Chion2009'} num={5} />.
-					</FootNoteText>
-					<FootNoteText id={4}>
+					</FootnoteText>
+					<FootnoteText id={4}>
 						Schaeffer reading of Husselr’s texts directly influences his systematical
 						description of the sound object in the <i>Traité des Objets Musicaux</i>{' '}
 						<QuoteMark id={'Kane2014'} num={6} />
@@ -207,26 +207,26 @@ export const EssayPage: React.FC = (): JSX.Element => {
 						it.With reference to the sound object, Schaeffer states that "the sound
 						object is never revealed clearly except in the acousmatic experience"{' '}
 						<QuoteMark id={'Kane2014'} num={6} />.
-					</FootNoteText>
-					<FootNoteText id={5}>
+					</FootnoteText>
+					<FootnoteText id={5}>
 						In Schaeffer’s words, cited in <QuoteMark id={'Kane2014'} num={6} />: "In
 						ancient times, the apparatus was a curtain; today, it is the radio and the
 						methods of reproduction, with the whole set of electro-acoustic
 						transformations, that place us, modern listeners to an invisible voice,
 						under similar circumstances".
-					</FootNoteText>
-					<FootNoteText id={6}>
+					</FootnoteText>
+					<FootnoteText id={6}>
 						Examples of this are the first appearance of the murder in <i>M</i> by Fritz
 						Lang (1931) or the mother’s voice in <i>Psycho</i> by Alfred Hitchcock
 						(1960), both mentioned by Chion in <QuoteMark id={'Chion1999'} num={8} />.
-					</FootNoteText>
-					<FootNoteText id={7}>
+					</FootnoteText>
+					<FootnoteText id={7}>
 						Cited in <QuoteMark id={'Butler2019'} num={9} />.
-					</FootNoteText>
-					<FootNoteText id={8}>
+					</FootnoteText>
+					<FootnoteText id={8}>
 						His research on the Todolellana sword dance, to which this interviews are
 						part of, is published in <QuoteMark id={'Pelinski2011'} num={11} />.
-					</FootNoteText>
+					</FootnoteText>
 				</div>
 
 				<div id='refs'>
@@ -304,26 +304,3 @@ export const EssayPage: React.FC = (): JSX.Element => {
 		</div>
 	)
 }
-
-const scrollHandler = (scrollTo: string) => (): void =>
-	document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })
-
-const FootnoteMark: React.FC<{ id: string | number }> = ({ id }): JSX.Element => (
-	<sup className='footnotemark'>
-		<span id={`sup${id}`} onClick={scrollHandler(`fn${id}`)}>
-			{id}
-		</span>
-	</sup>
-)
-const FootNoteText: React.FC<{ id: string | number }> = ({ id, children }): JSX.Element => (
-	<span className='footnotetext' id={`fn${id}`} onClick={scrollHandler(`sup${id}`)}>
-		<sup>{id}</sup>
-		{children}
-	</span>
-)
-
-const QuoteMark: React.FC<{ id: string; num: string | number }> = ({ id, num }) => (
-	<span className='quotemark' onClick={scrollHandler(id)}>
-		[{num}]
-	</span>
-)

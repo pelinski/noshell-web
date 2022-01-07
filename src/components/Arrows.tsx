@@ -1,5 +1,8 @@
 import React from 'react'
 
+export const scrollHandler = (scrollTo: string) => (): void =>
+	document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })
+
 export const ScrollArrow: React.FC<{ scrollTo: string; flip?: boolean }> = ({
 	scrollTo,
 	flip = false,
@@ -20,9 +23,6 @@ export const ScrollArrowSide: React.FC<{ scrollTo: string; side: string; flip?: 
 		</a>
 	</div>
 )
-
-export const scrollHandler = (scrollTo: string) => (): void =>
-	document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })
 
 export const arrowsHandler = ({
 	e,
