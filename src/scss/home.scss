@@ -33,31 +33,6 @@ $title-anim-time: 1s;
 	display: flex;
 	flex-direction: column;
 }
-// buttons
-.button {
-	cursor: pointer;
-	width: 100vw;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	user-select: none;
-	height: 15%;
-	color: white;
-	font-size: 12pt;
-	overflow: hidden;
-
-	div {
-		display: flex;
-		align-items: center;
-		width: fit-content;
-		bottom: 10vh;
-		transform: rotate(90deg);
-	}
-
-	&.flip {
-		transform: scale(1, -1);
-	}
-}
 
 // title
 #title-box {
