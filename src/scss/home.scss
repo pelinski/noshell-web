@@ -85,7 +85,7 @@ $title-anim-time: 1s;
 				font-size: 1.1 * $title-font-size;
 			}
 			> div {
-				padding: 1vh 0;
+				padding: 1vh 1vh;
 			}
 			> span {
 				// letters
@@ -148,6 +148,7 @@ $title-anim-time: 1s;
 			display: flex;
 			position: relative;
 			button {
+				height: 50px;
 				cursor: pointer;
 				width: 32px;
 				overflow: hidden;

@@ -20,6 +20,9 @@
 		> div {
 			display: flex;
 			padding: 1vh 0;
+			div {
+				padding: 0 1vw;
+			}
 		}
 
 		@media (min-width: $ipad) {
