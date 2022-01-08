@@ -7,7 +7,7 @@ export const AboutMePage: React.FC = (): JSX.Element => (
 			<Link to={'/read'}> +++go back </Link>
 		</nav>
 		<p>
-			i am teresa pelinski, a phd researcher in artificial intelligence and music at the queen
+			i am teresa pelinski, a phd researcher in artificial intelligence and music at queen
 			mary university of london. i did my undergrad in physics but i was mainly interested in
 			sound so i switched to sound stuff and studied one year of acoustics and after that, did
 			my masters in sound and music computing. i am not very good at playing instruments but
