@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import style from '../scss/AudioPlayer.module.scss'
+import * as style from '../scss/AudioPlayer.module.scss'
 
 export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.Element => {
 	const [isPlaying, setIsPlaying] = useState<boolean>(false)
