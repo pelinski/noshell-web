@@ -76,9 +76,16 @@
 
 	#refs,
 	#footnotes {
+		width: 80vw;
 		display: flex;
-		flex-wrap: wrap;
 		flex-direction: column;
+		a {
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+		}
+		h3 {
+			margin-top: 0;
+		}
 		span {
 			padding: 6px 0 3px 0;
 		}
@@ -88,6 +95,21 @@
 		.separator {
 			width: 100%;
 			text-align: center;
+		}
+	}
+	#footnotes {
+		margin-bottom: 2vh;
+	}
+	.phonos {
+		width: 80vw;
+		margin-top: 3vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		p {
+			display: flex;
+			flex-direction: row;
 		}
 	}
 }

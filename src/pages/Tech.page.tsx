@@ -33,6 +33,10 @@ export const TechPage: React.FC = (): JSX.Element => (
 		</p>
 
 		<nav>
+			<p>
+				this project was formed in residency @{' '}
+				<a href='https://www.upf.edu/web/phonos/'>phonos</a>
+			</p>
 			<Link to={'/read'}> +++go back</Link>
 		</nav>
 	</div>

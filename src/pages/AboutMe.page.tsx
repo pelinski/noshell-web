@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom'
 export const AboutMePage: React.FC = (): JSX.Element => (
 	<div id='aboutme'>
 		<nav>
+			<p>
+				this project was formed in residency @{' '}
+				<a href='https://www.upf.edu/web/phonos/'>phonos</a>
+			</p>
 			<Link to={'/read'}> +++go back </Link>
 		</nav>
 		<p>
