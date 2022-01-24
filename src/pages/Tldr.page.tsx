@@ -17,6 +17,10 @@ export const Tldr: React.FC = (): JSX.Element => (
 			<AudioPlayer audioSrc={'audio/with-the-voice.wav'} />
 		</div>
 		<nav>
+			<p>
+				this project was formed in residency @{' '}
+				<a href='https://www.upf.edu/web/phonos/'>phonos</a>
+			</p>
 			<Link to={'/read'}> +++go back</Link>
 		</nav>
 	</div>

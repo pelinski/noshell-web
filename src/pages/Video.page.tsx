@@ -15,8 +15,7 @@ export const VideoPage: React.FC = (): JSX.Element => {
 						url='https://vimeo.com/663434042'
 					/>
 					<span>
-						this video corresponds to mounted mini dv tape videos i recorded in
-						september 2020 in an abandoned construction site in north-central spain
+					mounted mini dv tape videos i recorded in september 2020 in an abandoned construction site in north-central spain
 						(ciudad del medioambiente, soria).
 					</span>
 				</div>
@@ -45,6 +44,10 @@ export const VideoPage: React.FC = (): JSX.Element => {
 				</div>
 				<ScrollArrow scrollTo={'video-1'} flip={true} />
 			</div>
+			<span className='phonos'>
+				this project was formed in residency @ {''}
+				<a href='https://www.upf.edu/web/phonos/'>phonos</a>
+			</span>
 			<nav>
 				<Link to={'/read'}> +++go back </Link>
 			</nav>

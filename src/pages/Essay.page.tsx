@@ -231,7 +231,6 @@ export const EssayPage: React.FC = (): JSX.Element => {
 
 				<div id='refs'>
 					<span className='separator'>-+-+-+-+-+-+-+-+-+-+-</span>
-					<br />
 					<h3>References</h3>
 
 					<span id='Paul2003'>
@@ -255,7 +254,7 @@ export const EssayPage: React.FC = (): JSX.Element => {
 						9781472458537.
 					</span>
 					<span id='Chion2009'>
-						[5] Michel Chion. Guide to Sound Objects. Pierre Schae er and Musical
+						[5] Michel Chion. Guide to Sound Objects. Pierre Schaeffer and Musical
 						Research. (English Translation by Dack, J. and North, C.) Paris, France:
 						Institut National de L’Audiovisuel &\ Éditions Buchet/Chastel, 2009.
 					</span>
@@ -300,6 +299,14 @@ export const EssayPage: React.FC = (): JSX.Element => {
 						de la Música & Generalitat Valenciana, 2011. isbn: 9788448256548.
 					</span>
 				</div>
+				<span className='phonos'>
+					<span className='separator'>-+-+-+-+-+-+-+-+-+-+-</span>
+					<br />
+					<p>
+						this project was formed in residency @{' '}
+						<a href='https://www.upf.edu/web/phonos/'> phonos</a>
+					</p>
+				</span>
 			</div>
 		</div>
 	)
