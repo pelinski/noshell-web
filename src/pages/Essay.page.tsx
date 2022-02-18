@@ -151,7 +151,7 @@ export const EssayPage: React.FC = (): JSX.Element => {
 				</h3>
 				<p>
 					<i>No Shell, Just a Voice</i> is voice generated with deep learning from a
-					dataset of digitalized tape voice recordings. It does not attempt to answer any
+					dataset of digitalised tape voice recordings. It does not attempt to answer any
 					of the questions posed above, but to provide a new perspective on the issue. As
 					Spawn, the voice in <i>No Shell, Just a Voice</i> is nothing more than the
 					recordings it has been trained on. These recordings correspond to interviews my
