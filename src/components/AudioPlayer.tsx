@@ -2,12 +2,12 @@ import React, { useState, useRef, useEffect } from 'react'
 import * as style from '../scss/AudioPlayer.module.scss'
 
 export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.Element => {
+	// using code from https://letsbuildui.dev/articles/building-an-audio-player-with-react-hooks
 	const [isPlaying, setIsPlaying] = useState<boolean>(false)
+	const [trackProgress, setTrackProgress] = useState<number>(0)
 
-	//refs
 	const audioRef = useRef<HTMLAudioElement>(new Audio(audioSrc))
 	const sliderRef = useRef<HTMLDivElement | null>(null)
-	const [trackProgress, setTrackProgress] = useState<number>(0)
 	const intervalRef = useRef<any>(null)
 
 	const { duration } = audioRef.current
@@ -17,12 +17,8 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 		clearInterval(intervalRef.current)
 
 		intervalRef.current = setInterval((): void => {
-			if (audioRef.current.ended) {
-				console.log(audioRef.current.currentTime)
-			} else {
-				setTrackProgress(audioRef.current.currentTime)
-			}
-		}, 1000)
+			if (!audioRef.current.ended) setTrackProgress(audioRef.current.currentTime)
+		}, 1500)
 	}
 
 	useEffect(() => {
@@ -52,9 +48,7 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 
 	const onScrubEnd = (): void => {
 		// If not already playing, start
-		if (!isPlaying) {
-			setIsPlaying(true)
-		}
+		if (!isPlaying) setIsPlaying(true)
 		startTimer()
 	}
 	const thumbPosition = (): number | string => {
