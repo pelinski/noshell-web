@@ -27,26 +27,16 @@
 			}
 		}
 
-		@media (min-width: $ipad) {
-			div {
-				color: black;
-				span {
-					color: white;
-				}
-			}
-		}
-		@media (max-width: $ipad) {
+		background-color: white;
+
+		div {
+			padding: 0.5vh;
 			background-color: white;
 
-			div {
-				padding: 0.5vh;
-				background-color: white;
-
-				color: white;
-			}
-			span {
-				color: black;
-			}
+			color: white;
+		}
+		span {
+			color: black;
 		}
 	}
 	.text {

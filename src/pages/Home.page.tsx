@@ -19,7 +19,7 @@ export const HomePage: React.FC = (): JSX.Element => (
 			tabIndex={0}
 			onKeyDown={(e) => arrowsHandler({ e, next: 'listen' })}
 		>
-			<Title titleStyle={'3d'} />
+			<Title titleStyle={'slick'} />
 			<ScrollArrow scrollTo={'listen'} />
 		</div>
 		<div
