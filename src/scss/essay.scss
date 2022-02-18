@@ -12,6 +12,7 @@
 		left: 2vw;
 	}
 	.title {
+		width: 80vw;
 		font-weight: 900;
 		display: flex;
 		flex-direction: column;
@@ -21,6 +22,7 @@
 		font-size: 0.8vw;
 		> div {
 			display: flex;
+			flex-wrap: wrap;
 			padding: 1vh 0;
 			div {
 				padding: 0 1vw;

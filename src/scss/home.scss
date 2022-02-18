@@ -173,6 +173,7 @@ $title-anim-time: 1s;
 			bottom: -2 * 100vh;
 			right: 5vw;
 			font-size: 10pt;
+			z-index: 100;
 			@media (max-height: $rot) {
 				left: 0;
 				width: 100vw;
@@ -186,10 +187,11 @@ $title-anim-time: 1s;
 		}
 
 		.home-nav {
+			width: 45vw;
 			p {
 				margin: 0;
 			}
-			width: fit-content;
+			//width: fit-content;
 			position: absolute;
 			bottom: -2 * 100vh-3vh;
 			display: flex;

@@ -63,7 +63,7 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 	}
 	return (
 		<>
-			<div className={style.AudioPlayer}>
+			<div className={style.AudioPlayer} aria-label='Audio player'>
 				{isPlaying ? (
 					<button
 						type='button'
@@ -84,13 +84,14 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 					</button>
 				)}
 				<p>---&nbsp;</p>
-				<div className='slider' ref={sliderRef}>
+				<div className='slider' ref={sliderRef} aria-hidden={true}>
 					<div
 						style={{
 							left: thumbPosition(),
 						}}
 					/>
 					<input
+						aria-label='track progress'
 						type='range'
 						value={trackProgress}
 						step='0.01'
