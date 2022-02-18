@@ -12,6 +12,7 @@
 		left: 2vw;
 	}
 	.title {
+		width: 80vw;
 		font-weight: 900;
 		display: flex;
 		flex-direction: column;
@@ -21,32 +22,23 @@
 		font-size: 0.8vw;
 		> div {
 			display: flex;
+			flex-wrap: wrap;
 			padding: 1vh 0;
 			div {
 				padding: 0 1vw;
 			}
 		}
 
-		@media (min-width: $ipad) {
-			div {
-				color: black;
-				span {
-					color: white;
-				}
-			}
-		}
-		@media (max-width: $ipad) {
+		background-color: white;
+
+		div {
+			padding: 0.5vh;
 			background-color: white;
 
-			div {
-				padding: 0.5vh;
-				background-color: white;
-
-				color: white;
-			}
-			span {
-				color: black;
-			}
+			color: white;
+		}
+		span {
+			color: black;
 		}
 	}
 	.text {

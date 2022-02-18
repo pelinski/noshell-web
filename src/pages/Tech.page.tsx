@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import { FootnoteMark, FootnoteText } from '../components/References'
 
 export const TechPage: React.FC = (): JSX.Element => (
-	<div id='tech'>
+	<div id='tech' aria-label='technical notes'>
 		<p>
-			++++-----
+			<div aria-hidden='true'>++++-----</div>
 			<br />
 			<b>some technical notes:</b> <br />
 			The code I used to generate the voice is publicly available{' '}
@@ -22,8 +22,8 @@ export const TechPage: React.FC = (): JSX.Element => (
 			training was around 24h hours for the 100.000 steps. The generation of the final audio
 			took around 2.5h, also on a GPU.
 			<br />
-			--------+++
-			<div id='footnotes'>
+			<div aria-hidden='true'>--------+++</div>
+			<div id='footnotes' aria-label='Footnotes'>
 				<br />
 				<FootnoteText id={1}>
 					van den Oord, A. et al. WaveNet: A Generative Model for Raw Audio (2016). URL{' '}
@@ -37,7 +37,10 @@ export const TechPage: React.FC = (): JSX.Element => (
 				this project was formed in residency @{' '}
 				<a href='https://www.upf.edu/web/phonos/'>phonos</a>
 			</p>
-			<Link to={'/read'}> +++go back</Link>
+			<Link to={'/read'}>
+				{' '}
+				<div aria-hidden='true'>+++</div>go back
+			</Link>
 		</nav>
 	</div>
 )

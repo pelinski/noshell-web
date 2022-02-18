@@ -278,7 +278,7 @@ export const ParsedTitle: React.FC<{ titleStyle: string }> = ({
 }
 
 export const Title: React.FC<{ titleStyle: string }> = ({ titleStyle = '3d' }) => (
-	<div className='title'>
+	<div className='title' aria-hidden={true} aria-label='Title: No shell, just a voice.'>
 		<ParsedTitle titleStyle={titleStyle} />
 	</div>
 )

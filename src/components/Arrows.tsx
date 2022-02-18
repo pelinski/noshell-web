@@ -7,8 +7,13 @@ export const ScrollArrow: React.FC<{ scrollTo: string; flip?: boolean }> = ({
 	scrollTo,
 	flip = false,
 }): JSX.Element => (
-	<a onClick={scrollHandler(scrollTo)} className={flip ? 'button flip' : 'button'}>
-		<div>----{'>'}</div>
+	<a
+		aria-role='Button'
+		aria-label={`Scroll to ${scrollTo}`}
+		onClick={scrollHandler(scrollTo)}
+		className={flip ? 'button flip' : 'button'}
+	>
+		<div aria-hidden={true}>----{'>'}</div>
 	</a>
 )
 
@@ -17,9 +22,13 @@ export const ScrollArrowSide: React.FC<{ scrollTo: string; side: string; flip?: 
 	side,
 	flip = false,
 }): JSX.Element => (
-	<div className={`arrow ${side}`}>
-		<a onClick={scrollHandler(scrollTo)} className={flip ? `flip ${side}` : `${side}`}>
-			----{'>'}
+	<div className={`arrow ${side}`} aria-role='Button'>
+		<a
+			aria-label={`Scroll to ${scrollTo}`}
+			onClick={scrollHandler(scrollTo)}
+			className={flip ? `flip ${side}` : `${side}`}
+		>
+			<div aria-hidden={true}>----{'>'}</div>
 		</a>
 	</div>
 )

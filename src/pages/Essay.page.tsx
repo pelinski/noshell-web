@@ -20,7 +20,7 @@ export const EssayPage: React.FC = (): JSX.Element => {
 				<Link to={'/tldr'}> +++tldr;--</Link>
 			</nav>
 
-			<div className='text'>
+			<div className='text' aria-role='article'>
 				<p>
 					The title of this work alludes to the multiauthor project{' '}
 					<i>No Ghost, Just a Shell</i> (1999-2002) initiated by the french artists
@@ -176,8 +176,10 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					that will, most probably, not be heard again.
 				</p>
 
-				<div id='footnotes'>
-					<span className='separator'>-+-+-+-+-+-+-+-+-+-+-</span>
+				<div id='footnotes' aria-label='Footnotes'>
+					<span className='separator' aria-hidden='true' aria-role='separator'>
+						-+-+-+-+-+-+-+-+-+-+-
+					</span>
 					<FootnoteText id={1}>
 						In Parreno's <i>Anywhere Out of the World</i> (2000), AnnLee says: "I am a
 						product. A product freed from the marketplace I was supposed to fill... I
@@ -229,8 +231,10 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					</FootnoteText>
 				</div>
 
-				<div id='refs'>
-					<span className='separator'>-+-+-+-+-+-+-+-+-+-+-</span>
+				<div id='refs' aria-label='References'>
+					<span className='separator' aria-hidden='true' aria-role='separator'>
+						-+-+-+-+-+-+-+-+-+-+-
+					</span>
 					<h3>References</h3>
 
 					<span id='Paul2003'>
@@ -300,7 +304,9 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					</span>
 				</div>
 				<span className='phonos'>
-					<span className='separator'>-+-+-+-+-+-+-+-+-+-+-</span>
+					<span className='separator' aria-hidden='true' aria-role='separator'>
+						-+-+-+-+-+-+-+-+-+-+-
+					</span>
 					<br />
 					<p>
 						this project was formed in residency @{' '}
