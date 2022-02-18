@@ -159,7 +159,7 @@ export const EssayPage: React.FC = (): JSX.Element => {
 					village in Els Ports region, in Castellón. These are part of his
 					ethnomusicological research
 					<FootnoteMark id={8} /> on the sword dance of la Todolella. In the tapes, the
-					elder and the young that inhabit la Todolella and the ermitages in its
+					elder and the young that inhabit la Todolella and the hermitages in its
 					surroundings talk about the life in the region in the past, what has changed,
 					about the identity of the village and the sword dance. Most of the old are now
 					deceased, and some of them I knew as a kid, as we spent long periods there
