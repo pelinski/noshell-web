@@ -16,7 +16,7 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 
 		intervalRef.current = setInterval((): void => {
 			if (audioRef.current && !audioRef.current.ended)
-				setTrackProgress(audioRef.current.currentTime)
+				setTrackProgress(audioRef.current.currentTime / audioRef.current.duration)
 		}, 50)
 	}
 
@@ -42,8 +42,8 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 		// Clear any timers already running
 		clearInterval(intervalRef.current)
 		if (audioRef.current != null) {
-			audioRef.current.currentTime = Number(value)
-			setTrackProgress(audioRef.current.currentTime)
+			audioRef.current.currentTime = Number(value) * audioRef.current.duration
+			setTrackProgress(audioRef.current.currentTime / audioRef.current.duration)
 		}
 	}
 
@@ -55,13 +55,10 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 	const thumbPosition = (): number | string => {
 		const thumbWidth = 7
 		const sliderWidth = sliderRef.current ? sliderRef.current.getBoundingClientRect().width : 0
-		const thumbPosition = audioRef.current
-			? (sliderWidth * trackProgress) / audioRef.current?.duration
-			: 0
-		if (audioRef.current && !trackProgress) return `${thumbPosition - thumbWidth - 3}`
-		if (audioRef.current && trackProgress > audioRef.current.duration - thumbWidth)
-			return thumbPosition - thumbWidth - 3
+		const thumbPosition = audioRef.current ? sliderWidth * trackProgress : 0
+		if (!trackProgress) return `${thumbPosition - thumbWidth - 3}`
 		// so that thumb does not get out of slider
+		else if (trackProgress > 1 - thumbWidth) return thumbPosition - thumbWidth - 3
 		else return thumbPosition
 	}
 	return (
@@ -96,9 +93,9 @@ export const AudioPlayer: React.FC<{ audioSrc: string }> = ({ audioSrc }): JSX.E
 					<input
 						type='range'
 						value={trackProgress}
-						step='1'
+						step='0.01'
 						min='0'
-						max={audioRef.current?.duration ? audioRef.current.duration + 3.5 : 100}
+						max='1'
 						onChange={(e) => onScrub(e.target.value)}
 						onMouseUp={onScrubEnd}
 						onKeyUp={onScrubEnd}
