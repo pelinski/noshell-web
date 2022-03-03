@@ -54,7 +54,8 @@ $title-anim-time: 1s;
 			color: white;
 			display: inline-block;
 			@media (max-width: $ipad) {
-				font-size: 2 * $title-font-size;
+				letter-spacing: 0.01px;
+				font-size: 1.3vw;
 			}
 			@media (max-height: $rot) {
 				font-size: 1.1 * $title-font-size;
@@ -89,6 +90,11 @@ $title-anim-time: 1s;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		.listen-arrows {
+			@media (max-width: $phone) {
+				display: none;
+			}
+		}
 		> div {
 			width: fit-content;
 			padding-bottom: 4vh;

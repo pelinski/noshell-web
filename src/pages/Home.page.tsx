@@ -36,19 +36,28 @@ export const HomePage: React.FC = (): JSX.Element => (
 			<div className='audios'>
 				<div aria-labelledby='track1'>
 					<span id={'track1'}>
-						1. archivo <div aria-hidden={true}>&nbsp;---{'>'}</div>
+						1. archivo{' '}
+						<div className='listen-arrows' aria-hidden={true}>
+							&nbsp;---{'>'}
+						</div>
 					</span>
 					<AudioPlayer audioSrc={'audio/interview-sample.wav'} />
 				</div>
 				<div aria-labelledby='track2'>
 					<span id={'track2'}>
-						2. proceso <div aria-hidden={true}>&nbsp;---{'>'}</div>
+						2. proceso{' '}
+						<div className='listen-arrows' aria-hidden={true}>
+							&nbsp;---{'>'}
+						</div>
 					</span>
 					<AudioPlayer audioSrc={'audio/process.wav'} />
 				</div>
 				<div aria-labellledby='track3'>
 					<span id={'track3'}>
-						3. voz <div aria-hidden={true}>&nbsp;-------{'>'}</div>
+						3. voz{' '}
+						<div className='listen-arrows' aria-hidden={true}>
+							&nbsp;-------{'>'}
+						</div>
 					</span>
 					<AudioPlayer audioSrc={'audio/just-a-voice.wav'} />
 				</div>
